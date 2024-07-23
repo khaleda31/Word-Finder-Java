@@ -1,0 +1,374 @@
+
+Sub-Programs and Java Methods 
+Software Development A(F28PA) 
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai) 
+
+
+Asub-program is a self-contained part of a program that does a particular thing 
+. 
+It is common practice to split up large programs into a number of smaller sub�programs 
+
+. 
+This makes them easier to read and understand 
+
+. 
+It also allows the same piece of code to be run multiple times in the same program 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Can we still do this? 
+
+
+A variable can only be seen, used or modified within the block where it is declared 
+. 
+This is known as a variable's scope 
+
+. 
+It means that a variable declared in one sub-program cannot be seen in another sub�program 
+
+. 
+More generally, a variable declared within {�}s can not be seen outside of the {�}s. 
+
+. 
+This includes variables declared in forloops, where the forstatement in considered part of the block 
+
+
+
+A variable can only be seen, used or modified within the block where it is declared 
+So, this piece of code won't work: 
+
+Since num no longer exists after the for block. 
+
+A variable can only be seen, used or modified within the block where it is declared 
+So, this piece of code won't work: 
+
+Since ican only be seen in the for loop's block, and not in the code following the for loop. 
+
+Scope is an example of a broader programming concept known as informationhiding 
+. 
+Basically, each part of a program should know as little as possible about other parts of the program 
+
+. 
+This means different parts of the program are less likely to interfere with each other 
+
+. 
+It also means that different parts of a program can be written separately, potentially by different people 
+
+
+
+
+We can pass an argument to the sub-program: 
+
+
+
+We can pass an argument to the sub-program: 
+
+
+
+How dowe get values back from asub-program? 
+
+Not like this! If you change the value of an argument, its value won't get updated in the calling code. Passing arguments is a one-way process (at least for primitives�) 
+
+Asub-program can explicitly return a value: 
+
+
+
+Asub-program can explicitly return a value: 
+
+The method call then evaluates to this return value. 
+Which basically means it is replaced by this value when the expression is evaluated and assigned to y. 
+
+
+A sub-program can contain multiple return statements (but only a single variable can be returned): 
+
+
+Once a return statement has been executed, the sub�program ends. 
+
+
+
+A sub-program can contain multiple return statements (but only a single variable can be returned): 
+
+
+Once a return statement has been executed, the sub�program ends. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Isitpossiblefora sub-programtoreturn multiplevalues? 
+. 
+Not in most programming languages, Java included 
+
+. 
+Some languages (e.g. Go) do support this 
+
+. 
+It can be achieved in Java using data structures 
+
+. 
+More on this in the next lecture 
+
+
+
+The correct name for a sub-programinJavais a method.Every method has a signature. 
+A method's signature indicates: 
+. 
+the name that is used to call it 
+
+. 
+the arguments it expects 
+
+. 
+the type of the value it returns 
+
+
+� other things, such as public and static, which will be explained later when we come to OOP 
+
+The correct name for a sub-programinJavais a method.Every method has a signature, e.g. 
+int countLetters(String s) String join(String s1, String s2) double calculateVolume(double radius) void 
+outputMessage(String message) 
+void means that the method does not return anything 
+
+int x; // � return x; 
+
+} 
+
+Will this work? 
+
+
+Will this work? 
+
+Yes, it's fine the local variables in main and add have the same name. They have different scope, so the names don't interfere. 
+
+Will this work? 
+
+No, if the signature states that a method returns an int, then Java won't be happy until you have a return statement 
+
+Will this work? 
+
+No, the method signature says it returns void (i.e. nothing). Java will complain when it finds the unexpected return statement. 
+
+Will this work? 
+
+No, divide will generate a value of type double, so there will be an error when its return value is assigned to an int variable. 
+
+
+
+
+
+
+
+What does this example demonstrate? 
+. 
+Methods can break up code into manageable chunks, making a program more readable and maintainable 
+
+. 
+They make it easier to add new functionality, without disturbing the functionality that's already there 
+
+. 
+They are also useful for separating interface code from implementation code 
+
+(to be discussed in F28PB) 
+
+. 
+In short, methods are an important aspect of software development 
+
+
+
+int x; // � return x; 
+
+} 
+
+. 
+Sub-programs are used to break up a program into smaller chunks, and allow code to be reused 
+
+. 
+Sub-programs are known as methods in Java 
+
+. 
+Methods can be passed one or more arguments 
+
+. 
+Methods can return exactly one value 
+
+. 
+The method signature specifies the arguments and the return type 
+
+
+
+
+
+In Java, methods are sub-programsthat can be called from other parts of the program 
+. 
+You can pass inputs (or arguments) to them, and they can return aresult 
+
+. 
+Their signature declares their arguments and their return type 
+
+. 
+They can't see variables declared in other methods, such as main (because of scope) 
+
+. 
+mainis a special method that always gets called when the program is first run 
+
+. 
+The way to pass arrays to methods is very much similar to how we pass values of primitive data types 
+
+. 
+Remember to correctly declare the input argument which is an array 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Will this work? 
+
+
+
+Arrays and Methods 
+Arrays can be used as arguments and return types of methods, but you have to be careful! 
+. 
+If you're just reading from an array you pass into a method, then everything will work fine 
+
+. 
+If you're returning an array created within a method, then this will also be fine 
+
+. 
+But if a method modifies an array passed in as an argument, then things get more interesting 
+
+
+
+We talked earlier that there are 2 kinds of variable: primitive types and object types 
+. 
+So far, the distinction hasn't been important 
+
+. 
+However, arrays are object types, and you need to know more about them before you can fully use arrays in the context of methods 
+
+. 
+The distinction between these two types lies in how they are stored in memory 
+
+
+
+Variables of primitive type (int, double etc.) are basically locations in a computer's memory where a single value is stored. 
+A block of memory, somewhere in your computer 
+double val 0.56643556  
+int count 42  boolean b true  
+char initial �M�  
+
+
+Variables of primitive type (int, double etc.) are basically locations in a computer's memory where a single value is stored. 
+When you copy a primitive variable, the value it contains is copied to the new variable 
+
+
+Object types, such as arrays, are different 
+. 
+An object variable holds an address, which points to the memory location where its contents are actually stored, elsewhere in memory 
+
+. 
+In other languages, object types are called pointers 
+
+When you copy an object variable, it actually copies this address, not the object's contents 
+
+. 
+Which means that the copy actually points to the same object. This can be a source of confusion! 
+
+. 
+E.g. .................... L ........; 
+
+
+double vals[] location 14  
+
+
+ double vals[0] 14 5.346  double vals[1] 33.245  double vals[2] 1.029  double vals[3] 42.24  double vals[4] 12.11  
+
+
+double vals[] Location 14  double nums[] Location 14  
+
+ 
+
+ double vals[0] 14 5.346  double vals[0] 33.245  double vals[0] 1.029  double vals[0] 42.24  double vals[0] 12.11  
+
+
+
+
+Here's an example: 
+
+
+�or � ? 
+
+array2 now points to the same structure in memory as array1, so anything done to array2 will affect array1, and vice versa When you pass an argument to a method, you are copying one variable to another 
+
+. 
+You are copying a variable in the calling method into a new local variable in the called method 
+
+. 
+This means that if you pass an array to a method, the method receives the same array object, and any changes you make to it will affect the original copy 
+
+
+
+
+
+To avoid this, you can create a new array, copy the original array into this item by item, and then manipulate the copy. This is known as deep copying. 
+
+
+Whetheryouwanttodeepcopyorshallowcopydependsuponthe context 
+. 
+In this example, deep copying preserves the original information, allowing it to be reused 
+
+. 
+If you don't need the original information any more, then shallow copying is more efficient 
+
+. 
+This is a brief introduction to this issue. It will come up again when you start to do object-oriented programming 
+
+
+
+Stringsare also variablesofobject type 
+� 
+However, in Java they behave more like primitives 
+
+� 
+This is an intentional design choice: a result of careful design of the String class and the Java language 
+
+� 
+It means you don't have to worry whether you are shallow or deep copying strings when you use them 
+
+� 
+This is not the case in some other languages which you may come across, e.g. C 
+
+
+
+
+
