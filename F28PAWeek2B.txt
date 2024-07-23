@@ -1,0 +1,1492 @@
+IterationsSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai)
+
+
+.
+Iteration is when the same group of statements are executed repeatedly within a loop
+
+.
+For a start, this saves you from having to write the same statements over and over again
+
+.
+Also, the code typically does something slightly different each time around the loop
+
+.
+Iteration and conditional execution are referred to as control flow statements, since they determine the flow of execution inside a program
+
+
+
+What is Iteration?
+
+
+
+
+Control Flow
+
+
+
+This repeatedly executes the statements in itsbody while a condition remains true
+
+while loops
+
+
+The condition gets evaluated when the while statement is first encountered and is then re-evaluated at the start of each iteration.
+
+
+
+
+Control Flow
+
+
+
+Simple examples
+
+
+
+
+Simple examples
+
+
+
+
+Simple examples
+
+
+
+
+true? true? true? true? true? tru..
+
+
+Simple examples
+
+Without loops, we'd have to write:
+
+
+
+Simple examples
+
+This loop stops when the user enters "stop"
+
+
+
+
+Simple examples
+
+
+Without loops, we'd have to write:
+
+
+This is almost the same as a while loop, except the condition is tested at the end of each iteration.
+
+do�while loops
+
+
+Which means the loop body is always executed at least once.
+
+
+
+
+Loop body
+
+
+
+yes no
+
+
+
+Code
+
+
+
+Code
+
+
+
+condition is true?
+
+
+
+Control Flow
+
+
+
+This loop stops when the user enters a valid number
+
+Simple examples
+
+
+
+
+Simple examples
+
+
+
+
+Simple examples
+
+
+
+
+
+
+
+
+
+
+
+...
+
+
+Simple examples
+
+
+
+
+
+Simple examples
+
+
+
+
+
+Simple examples
+
+
+
+
+When the condition is based on the value of one or more loop variables, it is common to use afor loop:
+.
+initial specifies the initial value of loop variable(s)
+
+.
+condition specifies the loop condition
+
+.
+update specifies how the loop variables are to be modified at the end of each iteration
+
+
+
+for loops
+
+
+
+
+
+Control Flow
+
+
+
+We can make the previous program shorter, and more readable, by using a for loop:
+
+Note that the condition is now count<=20, rather than count<20, because the update (count++) now happens at the end of the loop
+
+for loops
+
+
+
+
+Using a for loop, write a program to print out the children's song "Ten Green Bottles"
+10 green bottles standing on the wall
+10 green bottles standing on the wall
+And if 1 green bottle should accidentally fall
+There will be 9 green bottles standing on the wall
+9 green bottles standing on the wall
+9 green bottles standing on the wall
+And if 1 green bottle should accidentally fall
+There will be 8 green bottles standing on the wall
+� until you reach 0 green bottles
+
+Ten Green Bottles
+
+
+Ten Green Bottles
+
+
+
+We want a program that prints out the multiplication table for a particular value, e.g., Multiplication table for
+5 , asterisk operator , 1 , equals , , , 5
+5 , asterisk operator , 2 , equals , 10
+5 , asterisk operator , 3 , equals , 15
+5 , asterisk operator , 4 , equals , 20
+5 , asterisk operator , 5 , equals , 25
+5 , asterisk operator , 6 , equals , 30
+
+Example: Multiplication Table
+
+
+We want a program that prints out the multiplication table for a particular value, e.g., Multiplication table for
+5 , asterisk operator , 1 , equals , , , 5
+5 , asterisk operator , 2 , equals , 10
+5 , asterisk operator , 3 , equals , 15
+5 , asterisk operator , 4 , equals , 20
+5 , asterisk operator , 5 , equals , 25
+5 , asterisk operator , 6 , equals , 30
+
+Example: Multiplication Table
+
+
+
+We want a program that prints out the multiplication table for a particular value, e.g., Multiplication table for
+5 , asterisk operator , 1 , equals , , , 5
+5 , asterisk operator , 2 , equals , 10
+5 , asterisk operator , 3 , equals , 15
+5 , asterisk operator , 4 , equals , 20
+5 , asterisk operator , 5 , equals , 25
+5 , asterisk operator , 6 , equals , 30
+
+Example: Multiplication Table
+
+
+
+
+Here's a basic implementation using a for loop:
+
+Example: Multiplication Table
+
+
+
+
+
+
+
+A More Complete Program
+
+
+
+
+
+
+
+Multiplication Table
+
+
+
+
+More Complex Control FlowSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai)
+
+
+A variable can only be seen, used or modified within the block where it is declared
+
+This won't work, because the declaration for variable occurs within the block, meaning that it can't be seen or used after the block.
+
+
+Scope
+
+
+
+In a while or do-while loop, any code within the condition is considered to be outside the block
+
+This won't work, because the do-while condition can't see the value input, which is declared inside the block
+
+
+Scope
+
+
+
+
+
+In a while or do-while loop, any code within the condition is considered to be outside the block
+
+This now works.
+
+
+Scope
+
+
+
+
+
+
+In a for loop, any loop variables declared in the header are considered to be inside the block
+
+This won't work because i isn't visible after the block
+
+
+Scope
+
+
+
+
+
+Sometimes you want to do different things each time around the loop
+.
+One way of doing this is to embed a conditional execution statement within a loop body, e.g.
+
+
+
+Combining loops with ifs
+
+
+
+// code
+
+while(condition1) {
+
+
+}
+
+// code
+
+
+
+Control Flow
+
+
+
+
+
+Simple Example
+
+
+
+
+
+Simple Example
+
+
+
+
+
+
+
+
+Simple Example
+
+
+
+
+
+
+
+Continued Example
+
+
+
+
+
+
+Continued Example
+
+
+
+
+
+
+
+You can also embed a switch case in a loop:
+
+Switch�Case Example
+
+
+
+
+Switch�Case Example
+
+
+
+
+
+
+
+
+Sometimes you want your program to leave the loop before it gets to the end of an iteration
+.
+The break statement can be used to exit the loop at any point
+
+.
+The continue statement can be used to move immediately to the next iteration
+
+
+But these should be used carefully, since they sometimes make code harder to read
+
+
+
+Escaping From Loops
+
+
+
+
+Control Flow
+
+
+
+
+
+Control Flow
+
+
+
+However, they sometimes increase code clarity
+
+Escaping From Loops
+
+
+
+However, they sometimes increase code clarity
+In this example, we've removed the need for extra indentation. Too much indentation can be confusing.
+
+Escaping From Loops
+
+
+
+
+
+Continued Example
+
+
+
+
+
+
+Continued Example
+
+
+
+
+
+
+
+
+break is useful when a loop has two conditions. Here, it exits either after 10 repeats or when the user enters 0:
+
+
+Escaping From Loops
+
+
+
+
+Nested LoopsSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai)
+
+
+Loops can be nested inside other loops, e.g.
+
+
+Nested Loops
+
+
+
+Nested Loops
+
+Loops can be nested inside other loops, e.g.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+yes
+
+no
+
+
+
+cond1 is true?
+
+for(init1;cond1;updt1) {
+
+
+}
+
+
+
+init1 code
+
+
+
+updt1 code
+
+
+
+cond2 is true?
+
+
+
+init2 code
+
+
+
+Loop body
+
+
+
+updt2 code
+
+
+
+no
+
+yes
+
+Control Flow
+
+
+Multiplication Table (recap)
+
+
+
+
+Multiplication Table (Nested Loops)
+
+
+
+Multiplication Table (Nested Loops)
+
+
+
+
+
+
+
+
+
+
+
+
+Write a program to print a square pattern of a given size, e.g. 5:
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+Loop Exercises
+
+
+Write a program to print a square pattern of a given size, e.g. 5:
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+Loop Exercises
+
+
+
+
+
+Write a program to print a square pattern of a given size, e.g. 5:
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+Loop Exercises
+
+
+
+Loop Exercises
+
+
+
+
+
+Write a program to print the following pattern:
+
+Loop Exercises
+
+*
+
+ 
+*
+
+ *
+
+ 
+*
+
+ *
+
+ *
+
+ 
+*
+
+ *
+
+ *
+
+ *
+
+ 
+*
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+*
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+*
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+*
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+
+
+Write a program to print the following pattern:
+
+Loop Exercises
+
+row=1
+
+ *
+
+ print �*� 1 time
+
+ 
+row=2
+
+ *
+
+ *
+
+ print �*� 2 times
+
+ 
+row=3
+
+ *
+
+ *
+
+ *
+
+ print �*� 3 times
+
+ 
+row=4
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+row=5
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+row=6
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+row=7
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+row=8
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+a=0
+
+ a=1
+
+ a=2
+
+ a=3
+
+ a=4
+
+ a=5
+
+ a=6
+
+ a=7
+
+ 
+
+
+
+
+Loop Exercises
+
+
+
+
+
+How about?
+
+Loop Exercises
+
+*
+
+ 
+*
+
+ *
+
+ 
+*
+
+ *
+
+ 
+*
+
+ *
+
+ 
+*
+
+ *
+
+ 
+*
+
+ *
+
+ 
+*
+
+ *
+
+ 
+*
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+
+
+How about?
+
+Loop Exercises
+
+row=1
+
+ *
+
+ �� when 0 < a <0
+
+ 
+row=2
+
+ *
+
+ *
+
+ �� when 0 < a <1
+
+ 
+row=3
+
+ *
+
+ *
+
+ �� when 0 < a < 2
+
+ 
+row=4
+
+ *
+
+ *
+
+ �� when 0 < a < 3
+
+ 
+row=5
+
+ *
+
+ *
+
+ 
+row=6
+
+ *
+
+ *
+
+ 
+row=7
+
+ *
+
+ *
+
+ 
+row=8
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+a=0
+
+ a=1
+
+ a=2
+
+ a=3
+
+ a=4
+
+ a=5
+
+ a=6
+
+ a=7
+
+ 
+
+
+How about?
+
+Loop Exercises
+
+row=1
+
+ *
+
+ �� when 0 < a <0
+
+ 
+row=2
+
+ *
+
+ *
+
+ �� when 0 < a <1
+
+ 
+row=3
+
+ *
+
+ *
+
+ �� when 0 < a < 2
+
+ 
+row=4
+
+ *
+
+ *
+
+ �� when 0 < a < 3
+
+ 
+row=5
+
+ *
+
+ *
+
+ 
+row=6
+
+ *
+
+ *
+
+ 
+row=7
+
+ *
+
+ *
+
+ 
+row=8
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+a=0
+
+ a=1
+
+ a=2
+
+ a=3
+
+ a=4
+
+ a=5
+
+ a=6
+
+ a=7
+
+ 
+
+
+for row=1�row for col=1�row
+if(col==1)
+print "*"
+
+
+
+
+for row=1�row for col=1�row
+if(col==1 || col==row)
+print "*"
+
+How about?
+
+Loop Exercises
+
+row=1
+
+ *
+
+ �� when 0 < a <0
+
+ 
+row=2
+
+ *
+
+ *
+
+ �� when 0 < a <1
+
+ 
+row=3
+
+ *
+
+ *
+
+ �� when 0 < a < 2
+
+ 
+row=4
+
+ *
+
+ *
+
+ �� when 0 < a < 3
+
+ 
+row=5
+
+ *
+
+ *
+
+ 
+row=6
+
+ *
+
+ *
+
+ 
+row=7
+
+ *
+
+ *
+
+ 
+row=8
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+a=0
+
+ a=1
+
+ a=2
+
+ a=3
+
+ a=4
+
+ a=5
+
+ a=6
+
+ a=7
+
+ 
+
+
+
+
+
+for row=1�row for col=1�row
+if(col==1 || col==row ||
+row==n) print "*"
+
+How about?
+
+Loop Exercises
+
+row=1
+
+ *
+
+ �� when 0 < a <0
+
+ 
+row=2
+
+ *
+
+ *
+
+ �� when 0 < a <1
+
+ 
+row=3
+
+ *
+
+ *
+
+ �� when 0 < a < 2
+
+ 
+row=4
+
+ *
+
+ *
+
+ �� when 0 < a < 3
+
+ 
+row=5
+
+ *
+
+ *
+
+ 
+row=6
+
+ *
+
+ *
+
+ 
+row=7
+
+ *
+
+ *
+
+ 
+row=8
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+a=0
+
+ a=1
+
+ a=2
+
+ a=3
+
+ a=4
+
+ a=5
+
+ a=6
+
+ a=7
+
+ 
+
+
+
+
+
+for row=1�row for col=1�row
+if(col==1 || col==row ||
+row==n) print "*"
+else
+print ""
+
+How about?
+
+Loop Exercises
+
+row=1
+
+ *
+
+ �� when 0 < a <0
+
+ 
+row=2
+
+ *
+
+ *
+
+ �� when 0 < a <1
+
+ 
+row=3
+
+ *
+
+ *
+
+ �� when 0 < a < 2
+
+ 
+row=4
+
+ *
+
+ *
+
+ �� when 0 < a < 3
+
+ 
+row=5
+
+ *
+
+ *
+
+ 
+row=6
+
+ *
+
+ *
+
+ 
+row=7
+
+ *
+
+ *
+
+ 
+row=8
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ *
+
+ 
+a=0
+
+ a=1
+
+ a=2
+
+ a=3
+
+ a=4
+
+ a=5
+
+ a=6
+
+ a=7
+
+ 
+
+
+
+
+
+Just modifying the end part of the code:
+
+Loop Exercises
+
+
+
+
+You don't have to declare the loop variable in the for statement � you can use an existing variable.
+
+There's a lot of flexibility in the syntax of Java loops.
+
+Java for loops
+
+
+
+
+
+
+
+Java for loops
+
+
+
+You don't have to declare the loop variable in the for statement � you can use an existing variable.
+
+There's a lot of flexibility in the syntax of Java loops.
+
+
+
+
+
+In fact, all the parts of the for statement are  optional in Java. So, this is valid:
+
+Though while(true) would be clearer in this case. Most of the time when you use for, each part of the for loop will be used.
+
+Java for loops
+
+
+
+
+for loops can count in more complicated ways:
+.
+They can count down as well as up, e.g.
+
+
+for(int i=10; i>0; i--)//i=i-1
+.
+They don't have to go up or down by 1, e.g. 
+
+
+for(double i=0; i<100; i=i+0.5)
+for(int i=0; i<=100; i+=10)//i=i+10
+for(int i=2; i<=256; i*=2)//i=i*2
+
+Java for loops
+
+
+for loops can count in more complicated ways:
+.
+You can use multiple loop variables and conditions involving multiple variables, e.g.
+
+
+
+Java for loops
+
+
+EXAM
+
+
+
+
+
+
+
