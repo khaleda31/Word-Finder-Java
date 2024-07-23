@@ -1,0 +1,1662 @@
+ArraysSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai)
+
+
+
+
+
+
+
+
+
+.
+What is an array?
+
+.
+Creating and initialising arrays
+
+.
+Iterating through arrays
+
+.
+Some examples
+
+.
+Multi-dimensional Arrays
+
+
+
+Week 3A Topics
+
+
+
+
+
+An array is an ordered set of variables, all of the same type and sharing the same name
+.
+It's a way of grouping together related things
+
+.
+They are used extensively in programming
+
+.
+e.g., an array of integers:
+
+
+
+examResults
+
+
+
+What is an array?
+
+0th
+
+ 1st
+
+ 2nd
+
+ 3rd
+
+ 4th
+
+ 5th
+
+ 6th
+
+ 7th
+
+ 8th
+
+ 9th
+
+ 
+5
+
+ 0
+
+ 99
+
+ 22
+
+ 1
+
+ 100
+
+ 82
+
+ 42
+
+ 29
+
+ 8
+
+ 
+
+
+This is the syntax for declaring an array:
+Some examples:
+
+
+
+
+Declaring an array
+
+
+
+
+This is the syntax for initialising an array:
+Some examples:
+This creates an array and adds the specified values to it. You would use this syntax when you know in advance the initial values that you want to be in the array.
+
+Initialising an array
+
+
+
+
+However, often you do not know the values that will be in the array, just how many there are.
+This is the syntax for creating such an array:
+Some examples:
+
+Creating an array
+
+
+
+
+However, often you do not know the values that will be in the array, just how many there are.
+This is the syntax for creating such an array:
+
+
+Creating an array
+
+
+
+However, often you do not know the values that will be in the array, just how many there are.
+This is the syntax for creating such an array:
+
+
+Creating an array
+
+
+
+Once you've created an array, you can then setor modify the value of each element:
+An example:
+
+Setting values
+
+
+
+
+Once you've created an array, you can then setor modify the value of each element:
+An example:
+
+Setting values
+
+
+
+
+The indices are numbered from equation, to l e n g t h minus 1
+
+
+
+
+Once you've created an array, you can then setor modify the value of each element:
+An example:
+
+Setting values
+
+
+
+
+
+
+
+
+
+
+Arrays and LoopsSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai)
+
+
+Initialise and then output an array:
+
+Simple examples
+
+
+
+
+Initialise and then output an array.
+
+Simple examples
+
+
+
+
+
+
+Declare an empty array, then fill it using user input:
+
+Simple examples
+
+
+
+
+
+Calculate the sum and average of the array:
+
+Simple examples
+
+
+
+
+
+
+You can also iterate through an array using:
+So, in the previous example, we can rewrite
+as:
+
+�for each� syntactic sugar
+
+
+
+
+
+You can also iterate through an array using:
+So, in the previous example, we can rewrite
+as:
+
+�for each� syntactic sugar
+
+
+
+
+
+
+
+score
+
+ score
+
+ score
+
+ score
+
+ score
+
+ score
+
+ score
+
+ score
+
+ score
+
+ score
+
+ 
+
+
+
+Scores[0]
+
+ Scores[1]
+
+ Scores[2]
+
+ Scores[3]
+
+ Scores[4]
+
+ Scores[5]
+
+ Scores[6]
+
+ Scores[7]
+
+ Scores[8]
+
+ Scores[9]
+
+ 
+
+
+
+
+
+
+You can also iterate through an array using:
+So, in the previous example, we can rewrite
+as:
+
+�for each� syntactic sugar
+
+
+
+
+
+
+
+
+
+A larger example
+
+
+
+
+
+A larger example
+
+
+
+
+
+
+
+
+
+
+
+A larger example
+
+
+
+
+
+You may also come across array declarations like this:
+
+
+This form (with the [] after the name) was inherited from cap C , but is discouraged in Java. So, stick to:
+
+
+However, you're likely to find old code, or code by older coders, that uses the C version.
+
+Historical Note
+
+
+
+
+Array ExamplesSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai)
+
+
+Some Exercises
+
+
+
+
+
+
+Some Exercises
+
+
+
+
+
+Some Exercises
+
+
+
+
+
+
+Some Exercises
+
+
+
+
+
+Some Exercises
+
+
+
+
+
+
+
+b[9]=a[0]
+
+To reverse an array:
+
+Some Exercises
+
+a[0]
+
+ a[1]
+
+ a[2]
+
+ a[3]
+
+ a[4]
+
+ a[5]
+
+ a[6]
+
+ a[7]
+
+ a[8]
+
+ a[9]
+
+ 
+
+b[0]
+
+ b[1]
+
+ b[2]
+
+ b[3]
+
+ b[4]
+
+ b[5]
+
+ b[6]
+
+ b[7]
+
+ b[8]
+
+ b[9]
+
+ 
+
+
+
+
+b[8]=a[1] b[9]=a[0]
+
+Some Exercises
+
+a[0]
+
+ a[1]
+
+ a[2]
+
+ a[3]
+
+ a[4]
+
+ a[5]
+
+ a[6]
+
+ a[7]
+
+ a[8]
+
+ a[9]
+
+ 
+
+b[0]
+
+ b[1]
+
+ b[2]
+
+ b[3]
+
+ b[4]
+
+ b[5]
+
+ b[6]
+
+ b[7]
+
+ b[8]
+
+ b[9]
+
+ 
+
+To reverse an array:
+
+
+
+
+b[0]=a[9]
+
+. . .
+
+b[8]=a[1] b[9]=a[0]
+
+Some Exercises
+
+a[0]
+
+ a[1]
+
+ a[2]
+
+ a[3]
+
+ a[4]
+
+ a[5]
+
+ a[6]
+
+ a[7]
+
+ a[8]
+
+ a[9]
+
+ 
+
+b[0]
+
+ b[1]
+
+ b[2]
+
+ b[3]
+
+ b[4]
+
+ b[5]
+
+ b[6]
+
+ b[7]
+
+ b[8]
+
+ b[9]
+
+ 
+
+To reverse an array:
+
+
+
+
+b[0]=a[9]
+b[9-9]=a[9]
+
+. . .
+
+b[9-i]=a[i]
+
+== b[b.length-1-i]=a[i]
+
+
+b[8]=a[1] b[9]=a[0]
+b[9-1]=a[1] b[9-0]=a[0]
+
+Some Exercises
+
+a[0]
+
+ a[1]
+
+ a[2]
+
+ a[3]
+
+ a[4]
+
+ a[5]
+
+ a[6]
+
+ a[7]
+
+ a[8]
+
+ a[9]
+
+ 
+
+b[0]
+
+ b[1]
+
+ b[2]
+
+ b[3]
+
+ b[4]
+
+ b[5]
+
+ b[6]
+
+ b[7]
+
+ b[8]
+
+ b[9]
+
+ 
+
+To reverse an array:
+
+
+Some Exercises
+
+
+
+
+
+Some Exercises
+
+
+
+
+
+Some Exercises
+
+
+
+
+
+
+
+b[0]=a[0]
+
+Running total:
+
+Some Exercises
+
+a[0]
+
+ a[1]
+
+ a[2]
+
+ a[3]
+
+ a[4]
+
+ a[5]
+
+ a[6]
+
+ a[7]
+
+ a[8]
+
+ a[9]
+
+ 
+
+b[0]
+
+ b[1]
+
+ b[2]
+
+ b[3]
+
+ b[4]
+
+ b[5]
+
+ b[6]
+
+ b[7]
+
+ b[8]
+
+ b[9]
+
+ 
+
+
+
+
+b[1]=a[1]+b[0]
+
+Some Exercises
+
+a[0]
+
+ a[1]
+
+ a[2]
+
+ a[3]
+
+ a[4]
+
+ a[5]
+
+ a[6]
+
+ a[7]
+
+ a[8]
+
+ a[9]
+
+ 
+
+b[0]
+
+ b[1]
+
+ b[2]
+
+ b[3]
+
+ b[4]
+
+ b[5]
+
+ b[6]
+
+ b[7]
+
+ b[8]
+
+ b[9]
+
+ 
+
+Running total:
+
+
+
+
+b[2]=a[2]+b[1]
+
+Some Exercises
+
+a[0]
+
+ a[1]
+
+ a[2]
+
+ a[3]
+
+ a[4]
+
+ a[5]
+
+ a[6]
+
+ a[7]
+
+ a[8]
+
+ a[9]
+
+ 
+
+b[0]
+
+ b[1]
+
+ b[2]
+
+ b[3]
+
+ b[4]
+
+ b[5]
+
+ b[6]
+
+ b[7]
+
+ b[8]
+
+ b[9]
+
+ 
+
+Running total:
+
+
+
+b[i]=a[i]+b[i-1]
+
+
+
+b[0]=a[0]
+
+Some Exercises
+
+a[0]
+
+ a[1]
+
+ a[2]
+
+ a[3]
+
+ a[4]
+
+ a[5]
+
+ a[6]
+
+ a[7]
+
+ a[8]
+
+ a[9]
+
+ 
+
+b[0]
+
+ b[1]
+
+ b[2]
+
+ b[3]
+
+ b[4]
+
+ b[5]
+
+ b[6]
+
+ b[7]
+
+ b[8]
+
+ b[9]
+
+ 
+
+Running total:
+
+
+Some Exercises
+
+
+
+
+
+1+2=3
+
+
+
+1+2+3+4+5+6+7+8+9+10 = 55
+
+
+
+Arrays are sets of variables with a single name
+Array indices are used to access each array member
+Indices are numbered from equation, to open paren l e n g t h minus 1 close paren 
+Arrays can have any number of dimensions
+An array must be created before use, either using the n e w  keyword or open brace dot dot dot close brace  if the values are known
+Its length can be found using a. r r a. y . l e n g t h 
+Sometimes the "for each" syntax can be used to loop through its values:	f o r open paren t y p e , n a. m e : , a. r r a. y close paren 
+
+Summary
+
+
+Multi-Dimensional ArraysSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai)
+
+
+So far, you've seen single-dimensional arrays
+i. n t open bracket close bracket , a. , equals , n e w , i. n t open bracket 10 close bracket ;
+
+Multi-dimensional arrays
+
+a[0]
+
+ a[1]
+
+ a[2]
+
+ a[3]
+
+ a[4]
+
+ a[5]
+
+ a[6]
+
+ a[7]
+
+ a[8]
+
+ a[9]
+
+ 
+
+
+It is also possible to have multiple dimensions
+i. n t open bracket close bracket open bracket close bracket , a. , equals , n e w , i. n t open bracket 2 close bracket open bracket 10 close bracket ;
+
+Multi-dimensional arrays
+
+a[0][0]
+
+ a[0][1]
+
+ a[0][2]
+
+ a[0][3]
+
+ a[0][4]
+
+ a[0][5]
+
+ a[0][6]
+
+ a[0][7]
+
+ a[0][8]
+
+ a[0][9]
+
+ 
+a[1][0]
+
+ a[1][1]
+
+ a[1][2]
+
+ a[1][3]
+
+ a[1][4]
+
+ a[1][5]
+
+ a[1][6]
+
+ a[1][7]
+
+ a[1][8]
+
+ a[1][9]
+
+ 
+
+
+It is also possible to have multiple dimensions
+i. n t open bracket close bracket open bracket close bracket , a. , equals , n e w , i. n t open bracket 3 close bracket open bracket 10 close bracket ;
+
+Multi-dimensional arrays
+
+a[0][0]
+
+ a[0][1]
+
+ a[0][2]
+
+ a[0][3]
+
+ a[0][4]
+
+ a[0][5]
+
+ a[0][6]
+
+ a[0][7]
+
+ a[0][8]
+
+ a[0][9]
+
+ 
+a[1][0]
+
+ a[1][1]
+
+ a[1][2]
+
+ a[1][3]
+
+ a[1][4]
+
+ a[1][5]
+
+ a[1][6]
+
+ a[1][7]
+
+ a[1][8]
+
+ a[1][9]
+
+ 
+a[2][0]
+
+ a[2][1]
+
+ a[2][2]
+
+ a[2][3]
+
+ a[2][4]
+
+ a[2][5]
+
+ a[2][6]
+
+ a[2][7]
+
+ a[2][8]
+
+ a[2][9]
+
+ 
+
+
+
+
+
+
+It is also possible to have multiple dimensions
+i. n t open bracket close bracket open bracket close bracket open bracket close bracket , a. , equals , n e w , i. n t open bracket 2 close bracket open bracket 3 close bracket open bracket 10 close bracket ;
+
+Multi-dimensional arrays
+
+a[0][0][0]
+
+ a[0][0][1]
+
+ a[0][0][2]
+
+ a[0][0][3]
+
+ a[0][0][4]
+
+ a[0][0][5]
+
+ a[0][0][6]
+
+ a[0][0][7]
+
+ a[0][0][8]
+
+ a[0][0][9]
+
+ 
+a[0][1][0]
+
+ a[0][1][1]
+
+ a[0][1][2]
+
+ a[0][1][3]
+
+ a[0][1][4]
+
+ a[0][1][5]
+
+ a[0][1][6]
+
+ a[0][1][7]
+
+ a[0][1][8]
+
+ a[0][1][9]
+
+ 
+a[0][2][0]
+
+ a[0][2][1]
+
+ a[0][2][2]
+
+ a[0][2][3]
+
+ a[0][2][4]
+
+ a[0][2][5]
+
+ a[0][2][6]
+
+ a[0][2][7]
+
+ a[0][2][8]
+
+ a[0][2][9]
+
+ 
+
+
+
+
+
+
+
+
+
+
+It is also possible to have multiple dimensions
+i. n t open bracket close bracket open bracket close bracket open bracket close bracket , a. , equals , n e w , i. n t open bracket 3 close bracket open bracket 3 close bracket open bracket 10 close bracket ;
+
+Multi-dimensional arrays
+
+a[0][0][0]
+
+ a[0][0][1]
+
+ a[0][0][2]
+
+ a[0][0][3]
+
+ a[0][0][4]
+
+ a[0][0][5]
+
+ a[0][0][6]
+
+ a[0][0][7]
+
+ a[0][0][8]
+
+ a[0][0][9]
+
+ 
+a[0][1][0]
+
+ a[0][1][1]
+
+ a[0][1][2]
+
+ a[0][1][3]
+
+ a[0][1][4]
+
+ a[0][1][5]
+
+ a[0][1][6]
+
+ a[0][1][7]
+
+ a[0][1][8]
+
+ a[0][1][9]
+
+ 
+a[0][2][0]
+
+ a[0][2][1]
+
+ a[0][2][2]
+
+ a[0][2][3]
+
+ a[0][2][4]
+
+ a[0][2][5]
+
+ a[0][2][6]
+
+ a[0][2][7]
+
+ a[0][2][8]
+
+ a[0][2][9]
+
+ 
+
+
+To initialise a two-dimensional array:
+int[][] a = {{ 1, 2, 3, 4 },{ 5, 6, 7, 8 },{ 9, 8, 7, 6 } };
+
+
+
+
+
+
+
+Multi-dimensional arrays
+
+a[0][0]=1
+
+ a[0][1]=2
+
+ a[0][2]=3
+
+ a[0][3]=4
+
+ 
+a[1][0]=5
+
+ a[1][1]=6
+
+ a[1][2]=7
+
+ a[1][3]=8
+
+ 
+a[2][0]=9
+
+ a[2][1]=8
+
+ a[2][2]=7
+
+ a[2][3]=6
+
+ 
+
+
+To initialise a two-dimensional array:
+
+int[][]
+
+ a
+
+ =
+
+ {
+
+ {
+
+ 1,
+
+ 2,
+
+ 3,
+
+ 4
+
+ },
+
+ 
+{
+
+ 5,
+
+ 6,
+
+ 7,
+
+ 8
+
+ },
+
+ 
+{
+
+ 9,
+
+ 8,
+
+ 7,
+
+ 6
+
+ }
+
+ };
+
+ 
+We could alsohave written
+int[][] a= new int[3][4];
+
+ 
+a[0][0]=1;
+
+ a[0][1]=2;
+
+ a[0][2]=3;
+
+ a[0][3]=4;
+
+ 
+a[1][0]=5;
+
+ a[1][1]=6;
+
+ a[1][2]=7;
+
+ a[1][3]=8;
+
+ 
+a[2][0]=9;
+
+ a[2][1]=8;
+
+ a[2][2]=7;
+
+ a[2][3]=6;
+
+ 
+
+Multi-dimensional arrays
+
+
+To initialise a three-dimensional array:
+int[][][] a =
+
+{
+
+ {
+
+ {
+
+ 1,
+
+ 2,
+
+ 3,
+
+ 4
+
+ },
+
+ 
+{
+
+ 5,
+
+ 6,
+
+ 7,
+
+ 8
+
+ },
+
+ 
+{
+
+ 9,
+
+ 8,
+
+ 7,
+
+ 6
+
+ } },
+
+ 
+{
+
+ {
+
+ 5,
+
+ 4,
+
+ 3,
+
+ 2
+
+ },
+
+ 
+{
+
+ 1,
+
+ 2,
+
+ 3,
+
+ 4
+
+ },
+
+ 
+{
+
+ 5,
+
+ 6,
+
+ 7,
+
+ 8
+
+ } }
+
+ };
+
+ 
+
+
+
+
+
+
+
+
+
+
+Multi-dimensional arrays
+
+
+Remember this?
+
+
+
+Remember this?
+
+
+
+Remember this?
+
+
+
+
+
+Previously we had this:
+d o u b l e open bracket close bracket , s c o r e s , equals , n e w , d o u b l e open bracket s t u d e n t s close bracket ;
+
+Student ID number
+(going from 0 up to number of students � 1)
+
+
+Multi-dimensional example
+
+scores[0]
+
+ scores[1]
+
+ scores[2]
+
+ scores[3]
+
+ 
+
+
+scores[0][0]
+
+ scores[0][1]
+
+ scores[0][2]
+
+ scores[0][3]
+
+ 
+scores[1][0]
+
+ scores[1][1]
+
+ scores[1][2]
+
+ scores[1][3]
+
+ 
+
+We�re going to extend the previous example to handle multiple labs:
+
+d o u b l e open bracket close bracket open bracket close bracket , s c o r e s , equals , n e w , d o u b l e open bracket l a. b s close bracket open bracket s t u d s close bracket ;
+
+
+Student ID number (0�students-1)
+Lab ID number (0�labs-1)
+
+
+Multi-dimensional example
+
+
+scores[0][0]
+
+ scores[0][1]
+
+ scores[0][2]
+
+ scores[0][3]
+
+ 
+scores[1][0]
+
+ scores[1][1]
+
+ scores[1][2]
+
+ scores[1][3]
+
+ 
+
+We�re going to extend the previous example to handle multiple labs:
+
+d o u b l e open bracket close bracket open bracket close bracket , s c o r e s , equals , n e w , d o u b l e open bracket l a. b s close bracket open bracket s t u d s close bracket ;
+
+Multi-dimensional example
+
+
+These are the scores for Lab 1
+
+
+scores[0][0]
+
+ scores[0][1]
+
+ scores[0][2]
+
+ scores[0][3]
+
+ 
+scores[1][0]
+
+ scores[1][1]
+
+ scores[1][2]
+
+ scores[1][3]
+
+ 
+
+We�re going to extend the previous example to handle multiple labs:
+
+d o u b l e open bracket close bracket open bracket close bracket , s c o r e s , equals , n e w , d o u b l e open bracket l a. b s close bracket open bracket s t u d s close bracket ;
+
+Multi-dimensional example
+
+
+These are the scores for Lab 2
+
+
+scores[0][0]
+
+ scores[0][1]
+
+ scores[0][2]
+
+ scores[0][3]
+
+ 
+scores[1][0]
+
+ scores[1][1]
+
+ scores[1][2]
+
+ scores[1][3]
+
+ 
+
+We�re going to extend the previous example to handle multiple labs:
+
+d o u b l e open bracket close bracket open bracket close bracket , s c o r e s , equals , n e w , d o u b l e open bracket l a. b s close bracket open bracket s t u d s close bracket ;
+
+Multi-dimensional example
+
+
+These are the scores for Student 1
+
+
+scores[0][0]
+
+ scores[0][1]
+
+ scores[0][2]
+
+ scores[0][3]
+
+ 
+scores[1][0]
+
+ scores[1][1]
+
+ scores[1][2]
+
+ scores[1][3]
+
+ 
+
+We�re going to extend the previous example to handle multiple labs:
+
+d o u b l e open bracket close bracket open bracket close bracket , s c o r e s , equals , n e w , d o u b l e open bracket l a. b s close bracket open bracket s t u d s close bracket ;
+
+Multi-dimensional example
+
+
+These are the scores for Student 2
+
+
+Multi-dimensional example
+
+
+
+
+
+
+
+
+Multi-dimensional example
+
+
+
+
+
+For conciseness, the lowest and highest scores for each lab and student aren't calculated. I'll leave this as an exercise for you to try out outside the lecture.
+
+
+i. n t open bracket close bracket open bracket close bracket , x , equals , n e w , i. n t open bracket 3 close bracket open bracket 4 close bracket ;
+
+
+
+
+Demo
+
+Multi-dimensional array lengths
+
+x[0][0]
+
+ x[0][1]
+
+ x[0][2]
+
+ x[0][3]
+
+ 
+x[1][0]
+
+ x[1][1]
+
+ x[1][2]
+
+ x[1][3]
+
+ 
+x[2][0]
+
+ x[2][1]
+
+ x[2][2]
+
+ x[2][3]
+
+ 
+
+
+
+
+x[0]
+
+ 
+x[1]
+
+ 
+x[2]
+
+ 
+
+
+
+
+
+
+
+
+
+.
+The lengthattribute used in arrays is for obtaining the size of the array
+
+.
+The length() method is for String objects, which returns the number of characters present in the string.
+
+
+
+length vs length()
+
+
+
