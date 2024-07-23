@@ -1,0 +1,876 @@
+Values, Types and VariablesSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai) taught by Michael Lones
+
+
+Previously I showed you a simple Java program that prints something out to the screen:
+
+Recap
+
+
+
+
+
+One of the simplest things you can do in Java is calculate the result of a numerical expression:
+
+A Simple Expression
+
+
+
+
+
+One of the simplest things you can do in Java is calculate the result of a numerical expression:
+
+A Simple Expression
+
+
+
+
+
+
+
+One of the simplest things you can do in Java is calculate the result of a numerical expression:
+
+A Simple Expression
+
+
+
+
+
+
+
+Once you've calculated something, you often want to store it somewhere for later use:
+
+Saving the Result
+
+
+
+
+
+Once you've calculated something, you often want to store it somewhere for later use:
+
+Saving the Result
+
+
+
+
+
+A value is some entity that is manipulated by a program. Examples include:
+.
+A single number, e.g., 3.5
+
+.
+A piece of text, e.g., "Hello world"
+
+.
+A picture, e.g.
+
+
+
+
+
+Values
+
+
+Every value has a type, which is the kind of thing that a value represents:
+.
+A single number, e.g., 3.5
+
+.
+A piece of text, e.g., "Hello world"
+
+.
+A picture, e.g.
+
+
+
+
+
+Types
+
+
+A variable is a named memory location where you can store a value
+Its name is usually chosen to give a more specific indicator of what it contains, e.g., a. cap C a. t cap P i. c t u r e 
+A variable can store exactly one value
+In Java, every variable has a defined type, which indicates the kind of values it can contain
+
+Variables
+
+
+In programming languages, types are more specific than those we use in common language
+For example, types of numbers include:
+.
+Integers, which have no fractional part, e.g., 100, 10, -5
+
+.
+Floating-point numbers, which have a fractional part, e.g., 3.5
+
+.
+Numbers of various sizes, e.g., small numbers, large numbers
+
+
+
+Programming Types
+
+
+Java has two broad categories of types:
+.
+Primitive types. Numbers, characters and Booleans (which contain true or false values)
+
+.
+Object types. These are more complicated data structures held in memory. You'll come across many of these later in the course. For now, the only one you need to know about is the String type, which represents a string of characters.
+
+
+
+Java Types
+
+
+Java has a selection of different primitive types for representing numbers. Most common are:
+.
+int : This represents an integer (a whole number) in the range -231 to 231-1. It is relatively efficient to use.
+
+.
+double : This represents a floating-point (decimal), number. It can represent numbers very accurately, but is less efficient than using an int.
+
+
+
+Numbers
+
+
+Returning to the example:
+
+The variable named "result" has a type of "double". This is a type that can be used to represent floating-point numbers with a relatively high degree of precision.
+
+Saving the Result
+
+
+
+
+In Java, variables must be declared before they are first used. A declaration has the form:
+	t y p e , n a. m e ;
+Some example declarations:
+	i. n t , a. n cap I. n t e g e r ; 	i. n t , a. g e ;
+	d o u b l e , d e c i. m a. l cap V a. l u e ;
+	d o u b l e , a. m o u n t cap O w e d ;
+
+Declaration
+
+
+In Java, variables must be declared before they are first used. A declaration has the form:
+t y p e , n a. m e ;
+Some example declarations:
+
+
+i. n t , a. n cap I. n t e g e r ; 
+i. n t , a. g e ;
+d o u b l e , d e c i. m a. l cap V a. l u e ; 
+d o u b l e , a. m o u n t cap O w e d ;
+
+
+
+
+
+
+
+
+Declaration
+
+
+In Java, variables must be declared before they are first used. A declaration has the form:
+t y p e , n a. m e ;
+Some example declarations:
+
+
+i. n t , a. n cap I. n t e g e r ; i. n t , a. g e ;
+d o u b l e , d e c i. m a. l cap V a. l u e ; d o u b l e , a. m o u n t cap O w e d ;
+
+Declaration
+
+
+You can assign a value to a variable using =
+a. g e , equals , 18; // assigns the value 18
+You can assign an initial value within the variable declaration, or do this after the declaration:
+
+i. n t , a. g e , equals , 18;
+
+i. n t , a. g e ;
+a. g e , equals , 18;
+
+
+
+
+Assignment
+
+
+Returning to the example:
+
+So, this is an example of declaring a variable and assigning a value to it in one line of code.
+
+Declaration with Assignment
+
+
+
+Returning to the example:
+
+We could also have written it like this, with the declaration and assignment on separate lines
+
+Separate Declaration
+
+
+
+Numbers
+
+
+
+
+
+Number Errors
+
+
+
+
+
+
+
+
+Number Errors
+
+
+
+
+
+
+
+
+
+
+
+These examples illustrate a couple of things:
+.
+Java won't let you assign a value to a variable if the variable is not accurate enough to fully represent it
+
+.
+Java won't let you use a variable until it has been assigned a value, i.e., until it has been initialized
+
+
+
+Number Errors
+
+
+j s h e l l  allows you to execute small pieces of Java:
+
+
+A Quick Aside: j s h e l l 
+
+
+To run j s h e l l  (Note: it requires Java SDK 1.9+):
+Open a terminal window
+in Windows, this is the program "Command Prompt"
+In macOS, this is the program "Terminal"
+Then type j s h e l l  and press return
+Alternatively, try a web version: https://tryjshell.org
+
+A Quick Aside: j s h e l l 
+
+
+You can use casting to change the type of a value. Casting has the syntax:
+
+open paren d e s i. r e d , t y p e close paren , v a. l u e 
+This has various uses when programming. One use is to force a value into a variable when the types are not compatible.
+
+Casting
+
+
+Casting
+
+
+
+
+
+
+
+Other numeric types you might come across are:
+.
+byte : This is used when you only need to represent small integers in the range -128 to 127
+
+.
+short : This is used when you only need to represent integers in the range �32,768
+
+.
+long : This is used when an int is not big enough. It can represent integers in the range -263 to 263-1
+
+.
+float : This can be used when you need to save memory when representing floating point numbers. It has lower precision than a double.
+
+
+
+Other Numeric Types
+
+
+In general, use the most efficient type that can represent the numbers you are working with
+.
+If you're using whole numbers, don't use a floating point type. If you're using floating point numbers, don't use an integer type.
+
+.
+If you know the minimum/maximum number that a variable will contain, then consider byte, short or long. Otherwise, int is usually a safe bet.
+
+
+
+Efficiency
+
+
+The efficiency of a type is related to how much memory it uses, e.g.
+.
+A short is 16-bit, so it uses 2 bytes of memory
+
+.
+An int is 32-bit, so it uses 4 bytes of memory
+
+.
+A double is 64-bit, so uses 8 bytes of memory
+
+
+However, memory is cheap these days, so you don't have to worry about this unless you're using loads of data, your code needs to run very fast, or your program is running on an embedded system.
+
+Efficiency
+
+
+ExpressionsSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai) taught by Michael Lones
+
+
+Previously I showed you a Java program that saves the result of a calculation in a variable:
+
+Recap
+
+
+
+
+
+Previously I showed you a Java program that saves the result of a calculation in a variable:
+
+Recap
+
+
+
+
+
+
+
+An expression is a piece of code that consists of values, variables and/or operators, e.g.
+.
+2 � 1
+
+.
+4.5 / 3 + 2
+
+.
+result + 5
+
+.
+3 * result + 2 � result
+
+.
+"hello " + "world!"
+
+
+
+Expressions
+
+
+When an expression is evaluated, it results in a value, e.g.
+.
+2 � 1 // value is 1
+
+.
+4.5 / 3 + 2 // value is 3.5
+
+.
+result + 5 // 8.5 (if result contains 3.5)
+
+.
+3 * result + 2 � result // 9
+
+.
+"hello " + "world!" // "hello world!"
+
+
+
+Expressions
+
+
+The resulting value can then be saved to a variable, or used in some other way, e.g.
+.
+int difference = 2 � 1;
+
+.
+System.out.println(4.5 / 3 + 2);
+
+.
+double result = result + 5;
+
+.
+double d = 3 * result + 2 � result;
+
+.
+String message = "hello " + "world!";
+
+
+
+Expressions
+
+
+Java has a range of arithmetic operators that can be applied to numbers and numeric variables:
+.
+* : multiply
+
+.
+/ : divide
+
+.
++ : add
+
+.
+- : subtract
+
+.
+% : modulus
+
+
+
+Arithmetic Operators
+
+
+Assignment
+
+
+
+
+
+
+
+Arithmetic Operators
+
+
+
+
+
+
+
+Arithmetic Operators
+
+
+
+
+
+
+
+Java has shortcuts for simple variable operations:
+
+�i++;
+
+
+
+ is the same as
+
+ i
+
+ =
+
+ i+1;
+
+ 
+�i--;
+
+
+
+ is the same as
+
+ i
+
+ =
+
+ i-1;
+
+ 
+�i+=5;
+
+
+
+ is the same as
+
+ i
+
+ =
+
+ i+5;
+
+ 
+�i-=5;
+
+
+
+ is the same as
+
+ i
+
+ =
+
+ i-5;
+
+ 
+�i*=5;
+
+
+
+ is the same as
+
+ i
+
+ =
+
+ i*5;
+
+ 
+�i/=5;
+
+
+
+ is the same as
+
+ i
+
+ =
+
+ i/5;
+
+ 
+
+
+
+
+Arithmetic Operators
+
+
+Arithmetic Operators
+
+
+
+
+
+When constructing more complex expressions, you should be aware of precedence rules
+.
+Operators with highest precedence always get applied first, regardless of where they occur within an expression
+
+.
+If you're not aware of the precedence rules, then your program might have unexpected behaviour
+
+
+
+Precedence
+
+
+Mathematical operators in order of precedence (high to low):
+.
+()
+
+.
+++, --
+
+.
+- [minus]
+
+.
+*, /, %
+
+.
++, - [subtract]
+
+.
+=, +=, -=, *=, /-
+
+
+
+Precedence
+
+
+Mathematical operators in order of precedence (high to low):
+.
+()
+
+.
+++, --
+
+.
+- [minus]
+
+.
+*, /, %
+
+.
++, - [subtract]
+
+.
+=, +=, -=, *=, /-
+
+
+
+Precedence
+
+
+
+
+Mathematical operators in order of precedence (high to low):
+.
+()
+
+.
+++, --
+
+.
+- [minus]
+
+.
+*, /, %
+
+.
++, - [subtract]
+
+.
+=, +=, -=, *=, /-
+
+
+
+Precedence
+
+Multiplication has higher precedence than addition, meaning that:
+a. plus b asterisk operator c is not the same as open paren a. , plus , b close paren asterisk operator c 
+
+
+
+Mathematical operators in order of precedence (high to low):
+.
+()
+
+.
+++, --
+
+.
+- [minus]
+
+.
+*, /, %
+
+.
++, - [subtract]
+
+.
+=, +=, -=, *=, /-
+
+
+
+Precedence
+
+
+
+
+
+
+Complete this program so that it correctly calculates the formula y equals numerator , x plus 5 end numerator , over denominator , x minus 5 end denominator 
+
+Exercise
+
+
+
+
+
+This is:
+x plus 5 over x minus 5
+
+
+
+
+Incorrect Solution
+
+
+
+
+Complete this program so that it correctly calculates the formula y equals numerator , x plus 5 end numerator , over denominator , x minus 5 end denominator 
+
+
+
+
+This is:
+numerator , open paren x plus 5 close paren end numerator , over x minus 5
+
+
+
+
+
+
+Incorrect Solution
+
+
+
+
+Complete this program so that it correctly calculates the formula y equals numerator , x plus 5 end numerator , over denominator , x minus 5 end denominator 
+
+
+
+
+This is:
+x plus 5 over denominator , x minus 5 end denominator 
+
+
+
+
+
+
+Incorrect Solution
+
+
+
+
+Complete this program so that it correctly calculates the formula y equals numerator , x plus 5 end numerator , over denominator , x minus 5 end denominator 
+
+
+
+Correct Solution
+
+
+
+
+Complete this program so that it correctly calculates the formula y equals numerator , x plus 5 end numerator , over denominator , x minus 5 end denominator 
+
+
+
+Be careful when your expression involves types of a lower precision:
+
+Be Aware of Types
+
+
+
+
+Be Aware of Types
+
+Be careful when your expression involves types of a lower precision:
+
+
+
+
+
+Be Aware of Types
+
+Be careful when your expression involves types of a lower precision:
+
+
+
+
+
+
+
+
+
+
+
+Be Aware of Types
+
+Be careful when your expression involves types of a lower precision:
+
+
+
+
+
+
+
+Also be careful when you use numeric literals (that is, numbers that you type in your code)
+
+Be Aware of Types
+
+
+
+
+
+
+Be Aware of Types
+
+Also be careful when you use numeric literals (that is, numbers that you type in your code)
+
+
+
+
+
+
+
+Strings, Input and ConstantsSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai) taught by Michael Lones
+
+
+Java has two broad categories of types:
+.
+Primitive types. Numbers, characters and Booleans (which contain true or false values)
+
+.
+Object types. These are more complicated data structures held in memory. You'll come across many of these later in the course. For now, the only one you need to know about is the String type, which represents a string of characters.
+
+
+
+Recap
+
+
+Java's two non-numeric primitive types are:
+.
+char: This represents a single Unicode character. Unicode is a standard for representing the 136,755 characters found in different languages.
+
+.
+boolean : This has only two possible values: true or false. It is used in logic expressions. You'll come across Boolean values soon when we look at conditional execution.
+
+
+
+Other Primitive Types
+
+
+A char represents a single character.
+
+char
+
+ myInitial
+
+ =
+
+ 'M';
+
+ 
+char
+
+ smileyFace
+
+ =
+
+ '\u263A';
+
+ 
+
+Note the single quotes around the letter.
+In practice, you won't come across chars very often in Java programs. It's easier to use a String.
+
+chars
+
+
+A String represents a sequence of characters.
+String myName = "Michael";
+Note the double quotes around the letters.
+A String is an object type, not a primitive type. This is indicated by the initial capital letter in its type.
+
+Strings
+
+
+Strings
+
+
+
+
+
+
