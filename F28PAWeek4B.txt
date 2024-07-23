@@ -1,0 +1,339 @@
+Objects in Methods and ArraysSoftware Development A (F28PA)
+
+A selection of these slides are adapted from F27SA Software Development 1 & 2 (Edinburgh/Dubai).
+
+
+.
+Passing Objects to Methods
+
+.
+Arrays of Objects
+
+
+
+Outline
+
+
+.
+Passing by value for primitive type value .
+the value is passed to the parameter
+
+
+
+
+.
+Passing by value for reference type value .
+the value is the reference to the object
+
+
+
+
+.
+Recap: How are arrays passed into methods?
+
+
+
+Passing values into methods
+
+The referencevalue is copied into the method�s local variable
+
+
+Example: Passing by value for primitives' vs objects
+
+Recap: Passing Objects to Methods
+
+
+
+
+
+.
+Stack memory.
+Temporary memory where variables are stored when their methods are invoked
+
+.
+This is cleared once the method has run. 
+
+
+
+
+.
+Heap memory.
+Created by JVM when it starts
+
+.
+Contains all created objects
+
+
+
+
+
+
+Side track: Memory
+
+
+Passing Circle object into methods
+
+
+
+
+
+
+
+.
+An array of objects is actually an array of reference variables. 
+
+.
+So, what happens to all the referencing?
+
+
+
+Array of Objects
+
+Circle[] circleArray = new Circle[10];
+
+There are twolevels of referencing that occur. 
+E.g., if we invoke circleArray[1].getArea(), circleArrayreferences to the entire array. circleArray[1] references to a Circle object
+
+
+Array of Objects
+
+Circle[] circleArray = new Circle[10];
+
+
+
+An Array of Circle Objects
+
+
+
+.
+An array of objects allows us to iterate through all objects (of a similar class) and carry out tasks on all of them. E.g., initialising them with similar values, printing them in a similar way, modifying their data fields 
+
+.
+All objects are still independently kept in the array and are accessible individually.
+
+
+
+Benefits of using Arrays of Objects
+
+
+Object InteractionsSoftware Development A (F28PA)
+
+A selection of these slides are adapted from F27SA Software Development 1 & 2 (Edinburgh/Dubai).
+
+
+.
+OOP Concepts
+
+.
+Object Association.
+Composition & Aggregation
+
+
+
+
+.
+Immutable Objects and Classes
+
+
+
+Outline
+
+
+OOP Concepts
+
+OOP Concepts in Java | CodingNomads
+Source: https://codingnomads.co/
+
+Wrapping up variables and methods
+
+Hiding unnecessary details and only showing essential information to users
+
+Provides code reusability, minimising redundant code by organising shared attributes
+
+Ability of objects to take on many forms
+
+
+.
+How do objects interact with or relate to one another?
+
+.
+Can we associate an object with another object?
+
+.
+Can we create objects that composed of other objects?
+
+.
+Can we aggregate objects as a whole, representing a larger concept?
+
+
+
+Object Interactions
+
+
+.
+Object association is when there is a relationship between objects of two different classes.
+
+.
+Association can be one-to-one, one-to-many, many-to-one, many-to-many
+
+.
+Two forms of association: Composition and Aggregation
+
+
+
+Object Association
+
+
+.
+Aggregation is a �has-a� relationship between two objects
+
+.
+Uni-directional association (one-way). E.g. a library can have many books but vice versa is not possible
+
+.
+Both objects can survive individually even if the relationship ends. E.g. Library and book can be separate entities even if not linked.
+
+
+
+Object Aggregation
+
+
+.
+The Library class comprises of a number of Book objects, which have been created.
+
+.
+Its constructor initialises with an array of Book objects that have been initialised beforehand
+
+
+
+Object Aggregation
+
+
+
+
+.
+Composition is a �part-of� relationship between two objects
+
+.
+Both objects are dependent on each other � a composed object cannot exist without the other entity E.g. An engine is part of a vehicle. If the vehicle entity ceases to exist, likewise to the engine
+
+.
+Composition is a strong association whereas aggregation is a weak association
+
+
+
+Object Composition
+
+
+.
+Vehicle class is composed of a Battery object and an Engine object
+
+.
+Its constructor initialises the Battery and Vehicle objects. Without constructing Vehicle, both Battery and Engine cannot be constructed
+
+
+
+Object Composition
+
+
+
+
+UML Symbols
+
+
+
+
+Circle is �part of� Cylinder
+
+
+
+
+
+.
+Another form of interaction between objects known as inheritance involves a different kind of relationship where one class is seen as a �subset� of another. .
+We will be looking at this in the next topic.
+
+
+
+
+
+
+Other forms of interaction
+
+
+.
+If the contents of an object cannot be changed once the object is created, the object is called an immutable object, and its class is an immutable class.
+
+.
+E.g., Removing the setter methods from our Circle example would likely make the class immutable if radius is private and cannot be changed without the set method. 
+
+
+
+Immutable Objects and Classes
+
+
+.
+A class with all private data fields and without mutators is not necessarily immutable� (example in the next slide)
+
+
+
+Immutable Objects and Classes
+
+
+Immutable Objects and Classes
+
+
+
+}
+
+
+
+
+public class BirthDate {
+
+private
+
+ int
+
+ year;
+
+ 
+private
+
+ int
+
+ month;
+
+ 
+private
+
+ int
+
+ day;
+
+ 
+
+public BirthDate(int newYear,
+int newMonth, int newDay) {
+year = newYear; month = newMonth; day = newDay;
+}
+
+public void setYear(int newYear) {
+year = newYear;
+}
+
+}
+
+
+.
+This was possible because of the composition relation between Student class and BirthDate class.
+
+.
+student.getBirthDate() returns a BirthDate object which is then assigned to the object date. Making changes to date will also change birthdate in Student (reference) 
+
+
+
+Immutable Objects and Classes
+
+
+
