@@ -1,0 +1,1116 @@
+InheritanceSoftware Development A (F28PA)
+
+A selection of these slides are adapted from F27SA Software Development 1 & 2 (Edinburgh/Dubai).
+
+
+.
+Concept of Inheritance
+
+.
+Using Inheritance
+
+.
+Dealing with constructors in a hierarchy.
+Constructor Chaining
+
+
+
+
+
+
+Outline
+
+
+Biology
+
+
+Money/legal
+
+
+Inheritance as an object-oriented design principle!
+
+Analogies of Inheritance
+
+
+
+
+
+
+.
+What features do these birds share?
+
+
+
+OOP Inheritance
+
+
+.
+Sharing traits (properties/behaviors) within a family (type)
+
+
+
+
+
+OOP Inheritance
+
+
+.
+What can Inheritance in OOP do?.
+Avoids code duplication / redundancy
+
+.
+Helps improve cohesion and reduce coupling
+
+
+
+
+
+
+
+OOP Inheritance
+
+
+.
+Suppose you will define classes to model circles, rectangles, and triangles. These classes have many common features. 
+
+.
+What is the best way to design these classes so to avoid redundancy? The answer is to use inheritance.
+
+
+
+Motivation behind Inheritance
+
+
+.
+If two classes are related, how can we express that in code?
+
+.
+Imagine having two classes: SUV, Estate.
+Both represent cars, have 4 wheels, 1 motor, same purpose, �
+
+.
+Most of the code will be duplicated
+
+
+
+
+.
+Create a common class Car that holds the shared code.
+SUV and Estate can inherit the code
+
+.
+Shared code is only present in Car and not duplicated in SUV and Estate
+
+
+
+
+
+
+Classes are related by inheritance
+
+
+.
+Inheritance is a core OOP concept where a class can be derived from another class to construct a hierarchy of classes that share a set of properties and methods.
+
+.
+In Java, a class can be derived from another class called a superclass or parent class.
+
+.
+The derived class is called a subclass or child class.
+
+
+
+Inheritance
+
+
+
+Hierarchy of Classes
+
+
+.
+We need one superclass to inherit from
+
+.
+Add the keyword extends after the class header to indicate which class it inherits from.
+
+.
+Example:
+
+
+
+public , class , A , extends , B 
+
+Using Inheritance
+
+
+Going back to the Circles and Rectangles example
+We need a superclass that is more generic than these two classes
+These two classes will now be subclasses that inherit from that superclass.
+Let�s call the superclass GeometricObject
+
+Circles & Rectangles
+
+
+GeometricObject
+
+ 
+# color: String
+# filled: boolean
+-dateCreated: java.util.Date
+
+ 
++GeometricObject()
++GeometricObject(color: String, filled: boolean)
++ getColor(): String
++ setColor(color: String): void
++ isFilled(): boolean
++ setFilled(filled: boolean): void
++ getDateCreated(): java.util.Date
++toString(): String
+
+ 
+
+
+
+The color of the object (default: white).
+Indicates whether the object is filled with a color (default: false). The date when the object was created.
+Creates a GeometricObject.
+Creates a GeometricObject with the specified color and filled values.
+Returns the color. 
+Sets a new color.
+Returns the filled property.
+Sets a new filled property. Returns the dateCreated.
+Returns a string representation of this object.
+
+Circle
+
+-radius: double
+
++Circle()
++Circle(radius: double)
+
++Circle(radius: double, color: String,
+
+filled: boolean)
++getRadius(): double
+
++setRadius(radius: double): void
+
++getArea(): double
++getPerimeter(): double
++getDiameter(): double
++printCircle(): void
+
+
+Rectangle
+
+-width: double
+-height: double
+
++Rectangle()
++Rectangle(width: double, height: double)
++Rectangle(width: double, height: double color: String, filled: boolean)
++getWidth(): double
++setWidth(width: double): void
++getHeight(): double
++setHeight(height: double): void
++getArea(): double
++getPerimeter(): double
+
+
+
+
+UML Class Diagram
+
+
+.
+The protected access specifier can be applied on both data fields and methods.
+
+.
+A protected member of a class can be accessed by any class in the same package of its subclasses (even if they are in a different package)
+
+
+
+
+
+protected
+
+
+Access Specifier
+
+ Class
+
+ Package
+
+ Subclass
+
+ World
+
+ 
+public
+
+ 
+private
+
+ 
+protected
+
+ 
+No specifier (default)
+
+ 
+
+Checkmark
+Close
+Checkmark
+Checkmark
+Checkmark
+Checkmark
+Checkmark
+Checkmark
+Checkmark
+Checkmark
+Close
+Close
+Close
+Close
+Close
+Checkmark
+
+Recap: Access Specifiers
+
+
+.
+Objects from subclasses can access properties and methods inherited from superclass that are declared as protected
+
+
+
+
+Accessing members of superclass
+
+
+.
+Unlike properties and methods, the superclass�s constructors are not inherited in the subclass.
+
+.
+They can be invoked from the subclasses�s constructors using the keyword super.
+If the keyword is not explicitly used, the superclass�s no-arg constructor (default) is automatically invoked
+
+
+
+
+
+
+Are superclass�s constructors inherited?
+
+
+.
+A constructor (be it the default or overloaded constructors) will always invoke the superclass�s constructor. If they are not done explicitly, the compiler puts a super() as the first statement in the constructor
+
+
+
+
+is equivalent to
+
+
+
+
+
+
+is equivalent to
+
+
+
+
+
+Superclass�s constructor isalways invoked!
+
+
+.
+The keyword super refers to the superclass of the class in which super appears. This keyword can be used in two ways:.
+To call a superclass constructor
+
+.
+To call a superclass method
+
+
+
+
+
+
+Using the keywords super
+
+
+.
+You must use super to call the superclass constructor. Invoking the superclass constructor�s name in a subclass will result in syntax error
+
+.
+Calling the superclass�s methods can only be done in non-static methods or constructors of the subclass..
+Cannot call super.methodName() in the main method which is static!
+
+
+
+
+
+
+Precautions when using super
+
+
+.
+Constructing an instance of a class invokes all the superclasses� constructors along the inheritance chain. This is known as constructor chaining.
+
+
+
+Constructor Chaining
+
+
+
+
+
+Constructor Chaining
+
+
+
+
+
+
+
+
+Constructor Chaining
+
+
+
+
+
+
+
+
+
+Constructor Chaining
+
+
+
+
+
+
+
+
+
+
+
+Constructor Chaining
+
+
+
+
+
+
+
+
+
+
+
+
+
+Constructor Chaining
+
+
+
+
+
+
+
+
+
+
+
+
+
+Constructor Chaining
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Constructor Chaining
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Constructor Chaining
+
+
+
+What if some no-arg constructors from superclass(es) are missing?
+
+
+
+
+
+What if some no-arg constructors from superclass(es) are missing?
+
+
+
+
+Method OverridingSoftware Development A (F28PA)
+
+A selection of these slides are adapted from F27SA Software Development 1 & 2 (Edinburgh/Dubai).
+
+
+.
+Subclass
+
+.
+Method Overriding
+
+.
+The ObjectClass and its Methods
+
+
+
+Outline
+
+
+.
+A subclass inherits from a superclass. You can also:.
+Add new properties
+
+.
+Add new methods
+
+.
+Override methods of the superclass
+
+
+
+
+
+
+Subclasses
+
+
+Calling Superclass Methods
+
+.
+Earlier methods that were meant for printing the properties within a single class can now be written differently due to inheritance:
+
+.
+Example:
+
+
+
+
+
+.
+A subclass inherits methods from a superclass.
+
+.
+Sometimes, it is necessary for the subclass to modify the existing implementation of a method defined in the superclass. This is referred to as method overriding.
+
+
+
+Overriding Methods in Superclass
+
+
+
+.
+An instance method can be overridden only if it is accessible. Thus, a private method cannot be overridden, because it is not accessible outside its own class. If a method defined in a subclass is private in its superclass, the two methods are completely unrelated and hence overriding cannot occur..
+Common issue: Only public and protected specifiers will allow accessibility across hierarchy. The �default� setting also does not allow.
+
+
+
+
+
+
+Overriding Methods � Note #1
+
+
+.
+Like an instance method, a static method can be inherited. However, a static method cannot be overridden. If a static method defined in the superclass is redefined in a subclass, the method defined in the superclass is hidden.
+
+
+
+Overriding Methods � Note #2
+
+
+Overriding vs. Overloading
+
+
+
+
+
+
+
+
+.
+Overloading presents a different �version� of the method (as the method signature is different from that from the superclass)
+
+.
+However, the superclass method can still be invoked via the subclass object given the right accessibility levels
+
+
+
+Overriding vs. Overloading
+
+
+
+
+
+
+Every class in Java is descended from the bold j bold a. bold v bold a. . bold l bold a. bold n bold g . bold cap O bold b bold j bold e bold c bold t  class. 
+
+If no inheritance is specified when a class is defined, the superclass of that class is Object.
+
+Did you know???
+
+Equivalent
+
+
+
+
+
+{
+
+public class Circle
+...
+}
+
+The Object Class and its Methods
+
+
+bold t bold o bold cap S bold t bold r bold i. bold n bold g open paren close paren  method
+
+.
+The ................................() method exists in the Object class. It returns a String representation of the object..
+By default, it returns a string consisting of the class name of which the object is an instance, the at (@) sign and a number representing the address of the object
+
+
+
+
+
+
+
+Example: 
+
+
+Typically, it returns something like:
+Loan , next row, 15037e5 
+This message is not very helpful or informative. You can override the bold t bold o bold cap S bold t bold r bold i. bold n bold g open paren close paren  method so that it returns a digestible string representation of the object.
+
+Loan , loan , equals , new , Loan open paren close paren ; System.out.println open paren loan.toString open paren close paren close paren ;
+
+bold t bold o bold cap S bold t bold r bold i. bold n bold g open paren close paren  method
+
+
+In the GeometricObject class, this overrides the Object class�s toString open paren close paren  default method
+
+
+In the Circle class, this overrides the GeometricObject class�s toString open paren close paren  method
+
+
+
+bold t bold o bold cap S bold t bold r bold i. bold n bold g open paren close paren  method
+
+
+Multiple Inheritance?
+
+.
+Java does not support multiple inheritance, so a class cannot extend (inherit) from more than one class.
+
+.
+Some other programming languages (like C++) allow multiple inheritance
+
+.
+Java has something called interfaces, whereby a class can implement many of these �interfaces�, which caters for the lack of multiple inheritance.
+
+
+
+
+PolymorphismSoftware Development A (F28PA)
+
+A selection of these slides are adapted from F27SA Software Development 1 & 2 (Edinburgh/Dubai).
+
+
+.
+Introducing Polymorphism
+
+.
+Dynamic Binding during Runtime
+
+.
+Casting Objects.
+Upcasting and Downcasting
+
+
+
+
+
+
+Outline
+
+
+What is Polymorphism?
+
+.
+What you have seen so far with inheritance, method overriding are all various characteristics of OOP that provide for the possibility of �polymorphism�
+
+.
+In OOP, polymorphism is the ability of an object to take many forms..
+In other words, we can perform the same action in different ways
+
+
+
+
+
+
+
+Polymorphism - Definition and Examples - Biology Online Dictionary
+Heliconius Homepage | Speciation: a Few Big Genes or Many Little Ones?
+Bionutrics - Qu&#39;est-ce que le polymorphisme g�n�tique ?
+�Polymorphism�
+
+.
+Polymorphism occurs in nature as well � several different forms or types of individuals among members of the same species
+
+
+
+
+Polymorphism in action, already
+
+.
+We have seen polymorphism in action:
+
+.
+Inheritance.
+Subclasses inherit part of the characteristics of the superclass. We could say the subclass is a type of the superclass.
+
+
+
+
+.
+Method overriding.
+A subclass method can change the form of something seen in the superclass method
+
+
+
+
+
+
+
+Can a subclass object be �considered� as a superclass object? 
+
+A Circle is a GeometricObject, isn�t it? So, you should be able to use GeometricObject to refer to a Circle�
+
+Solved Part 1: Application Use the inheritance hierarchy | Chegg.com
+More polymorphism�
+
+
+Subclasses and Subtyping
+
+.
+Classes define types
+
+.
+Subclasses define subtypes
+
+.
+Objects of subclasses can be used where objects of supertypes are required (also known as substitution)
+
+
+
+
+
+
+
+Subtyping and assignment
+
+
+Polymorphic Variables
+
+.
+Object variables in Java are polymorphic
+
+.
+They can hold objects of more than one type
+
+.
+Objects of the declared type or of subtypes of the declared type
+
+
+
+
+.
+We can assign subtype to supertype�
+
+.
+�but we cannot assign supertype to subtype!
+
+.
+Casting fixes this:
+
+
+(only ok if the vehicle is a Car!)
+
+
+Casting
+
+
+Casting is used to overcome type loss
+When you turn a Car into a Vehicle, the compiler forgets that it ever was a Car.
+The object was never changed in any way, but it now has a different identity
+JVM makes a runtime check to ensure the object really is of that type
+Produces a ClassCastException error if it isn�t
+
+Casting
+
+
+
+Automatic upcasting .
+
+Car c = new Car();
+Vehicle v = c;
+
+
+Automatic Upcasting to Vehicle
+
+
+Vehicle v;
+Car c = new Car();
+v = c;
+c = v;
+
+
+
+Will this run? 
+
+Casting
+
+
+Vehicle v;
+Car c = new Car();
+v = c;
+c = (Car) v;
+
+Will this run? 
+
+
+
+
+Manual Downcasting to Car
+
+
+.
+These casting operations can be distinguished based on the direction in which the casting occurs. .
+�Upcasting� refers to casting an object from a subclass to a superclass. It moves �upwards� towards the top of hierarchy, or the parent.
+
+.
+�Downcasting� refers to casting an object from a superclass to a subclass. This moves �downwards� in the hierarchy, from a parent to child.
+
+
+
+
+
+
+Type Casting
+
+
+
+Source: http://forum.codecall.net/java-tutorials/20719-upcasting-downcasting.html
+
+Type Casting
+
+
+
+
+Type Casting - Example
+
+
+
+
+
+
+
+
+Upcasting Example
+
+
+
+
+
+Possible Upcasting Errors
+
+.
+If you upcast an object, it will lose all its properties, which were inherited from below its current position.
+
+
+
+
+
+
+
+Downcasting Example
+
+
+
+
+
+
+Cats cannot be casted as Dogs!
+
+Casting Error
+
+
+
+
+
+Downcasting Error
+
+.
+Such code throws "java.lang.ClassCastException: Mammal cannot be cast to Cat" exception during running because we are trying to cast a Mammal, which is not a Cat, to a Cat.
+
+
+
+
+.
+To help understand casting, you may also consider the analogy of fruit, apple, and orange with the Fruit class as the superclass for Apple and Orange. An apple is a fruit, so you can always safely assign an instance of Apple to a variable for Fruit. However, a fruit is not necessarily an apple, so you have to use explicit casting to assign an instance of Fruit to a variable of Apple.
+
+
+
+Orange fruit | Orange fruit, Fruits drawing, Fruits images
+One Apple Creative Advertising - Home | Facebook
+
+
+
+?
+
+Orange fruit | Orange fruit, Fruits drawing, Fruits images
+One Apple Creative Advertising - Home | Facebook
+
+
+
+
+Another way to understand casting
+
+
+.
+Polymorphism can also occur when passing objects into methods.
+
+.
+Same concept applies, where a subtype reference can be copied to a supertype reference
+
+
+
+public class PolymorphismDemo{
+public static void main(String[] args) {
+// Display circle and rectangle properties
+displayObject(new Circle(1, "red", false));
+displayObject(new Rectangle(1, 1, "black", true));
+}
+/** Display geometric object properties */
+public static void displayObject(GeometricObjectobject) {
+System.out.println("Created on " + object.getDateCreated() +
+". Coloris " + object.getColor());
+}
+}
+
+
+
+
+Examples (I)
+
+
+.
+In this example, m takes a parameter of Object type. So, you can invoke it with any object! 
+
+
+
+
+
+
+Examples (II)
+
+
+.
+When method m(Object x) is executed, the argument�s toString() method is invoked.
+
+.
+x can now take the form of an instance of GraduateStudent, Student, Person and Object, all with their respective toString implementations.
+
+.
+Dynamic binding: which implementation is used will be determined by JVM at runtime.
+
+
+
+public class PolymorphismDemo2 {
+
+public static void main(String[] args) { m(new GraduateStudent());
+m(new Student());
+m(new Person());
+m(new Object());
+}
+
+public static void m(Object x) { System.out.println(x.toString());
+}
+
+}
+
+class GraduateStudent extends Student {
+}
+
+class Student extends Person { public String toString() {
+return "Student";
+}
+}
+
+class Person extends Object {
+public String toString() { return "Person";
+}
+}
+
+
+Dynamic Binding
+
+
+.
+Dynamic binding works as follows: Suppose an object o is an instance of classes C1, C2, ..., Cn-1, and Cn, where C1 is a subclass of C2, C2 is a subclass of C3, ..., and Cn-1 is a subclass of Cn. That is, Cn is the most general class, and C1 is the most specific class. In Java, Cn is the Object class. If o invokes a method p, the JVM searches the implementation for the method p in C1, C2, ..., Cn-1 and Cn, in this order, until it is found. Once an implementation is found, the search stops, and the first-found implementation is invoked.
+
+
+
+
+
+
+. . . . .
+
+
+
+
+
+
+Object
+
+
+
+Since o is an instance of C1, o is also an instance of C2, C3, �, Cn-1, and Cn
+
+Dynamic Binding
+
+
+.
+Matching a method signature and binding a method implementation are two different issues. .
+The compiler finds a matching method according to parameter type, number of parameters, and order of the parameters at compilation time. A method may be implemented in several subclasses. The Java Virtual Machine (JVM) dynamically binds the implementation of the method at runtime.
+
+
+
+
+
+
+Method Matching vs Binding
+
+
+.
+Polymorphism allows methods to be used generically for a wide range of object arguments. This is known as generic programming. 
+
+.
+If a method�s parameter type is a superclass (e.g., Object), you may pass an object to this method of any of the parameter�s subclasses (e.g., Student or String). When an object (e.g., a Student object or a String object) is used in the method, the particular implementation of the method of the object that is invoked (e.g., toString) is determined dynamically.
+
+
+
+Generic Programming
+
+
+Explicit casting must be used when casting an object from a superclass to a subclass.
+
+Apple , x , equals , open paren Apple close paren fruit;
+Orange , x , equals , open paren Orange close paren fruit;
+	
+However, this way of casting may not always succeed because at runtime, sometimes (depending on code) JVM cannot figure out whether a particular instance of superclass can be casted successfully to a specific subclass as defined.
+
+Explicit Casting
+
+
+Use the instanceof operator to test whether an object is an instance of a class:
+
+Object myObject = new Circle();
+... // Some lines of code
+/** Perform casting if myObject is an instance of Circle */
+if (myObject instanceof Circle) { 
+ System.out.println("The circle diameter is " + ((Circle)myObject).getDiameter());
+...
+}
+
+The bold i. bold n bold s bold t bold a. bold n bold c bold e bold o bold f  Operator
+
+
+.
+When did you last saw this method used?
+
+.
+If you had seen it used with String, that�s because String has an implementation that overrides the default equals method of the Object class
+
+
+
+
+Recap: The equals Method
+
+
+Now, you may override it as well for other classes you implement, such as Circle, or you can implement generically but using instanceOf to check for the correct types to make appropriate comparisons
+
+
+The equals Method
+
+
+.
+A subclass may override a protected method defined in its superclass and change its visibility to public.
+
+.
+However, a subclass cannot weaken the accessibility of a method defined in the superclass..
+E.g. If a method is defined as public in the superclass, it must be defined public in the subclass.
+
+
+
+
+
+
+Weakening Accessibility in Subclass
+
+
+.
+We already know that a final data field is a constant.
+
+.
+By using final keyword, neither a final class nor a final method can be extended or overridden.
+
+
+
+finalclassMath{
+...
+}
+
+public finalvoid m(){
+...
+}
+
+Preventing Extending and Overriding
+
+
+
