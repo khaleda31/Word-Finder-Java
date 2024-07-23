@@ -1,0 +1,1213 @@
+Introduction to Object Oriented ProgrammingSoftware Development A (F28PA)
+
+A selection of these slides are adapted from F27SA Software Development 1 & 2 (Edinburgh/Dubai).
+
+
+.
+Brief intro to object-oriented programming(OOP)
+
+.
+Objects and Classes
+
+.
+UML Class Diagram
+
+.
+Classes �Constructors, Methods, Data Fields
+
+.
+Java Library Classes
+
+
+
+Outline
+
+
+Object-oriented programming (OOP) has become increasingly popular
+.
+Because it helps you write larger programs
+
+.
+And can also be used to write small programs
+
+.
+It is the main approach used in the software engineering industry, so is useful forjobs!
+
+.
+You will learn about it across both SDA and SDB
+
+
+
+Object-Oriented Programming
+
+
+.
+Simula was developed for doing AI simulations in the 50/60s
+
+.
+Smalltalk, developed at Xerox PARC, added lots of new OOP concepts
+
+.
+Around this time, large software projects were beginning to fail
+
+.
+Bjarne Stroustrup noticed that OOP languages scaled well, but were slow, and went on to develop C++
+
+.
+Java was heavily influenced by C++
+
+
+
+Simula
+
+C 60s
+
+Smalltalk
+
+C++
+
+Java
+
+
+
+
+
+
+
+70s
+
+80s
+
+90s
+
+History of OOP
+
+
+https://www.tiobe.com/tiobe-index/
+
+
+
+
+OOP Languages are Dominant 
+
+
+Fortunately, not! Most of what you've already learnt about programming also applies to OOP:
+.
+It uses the same control flow statements: if�else, case�switch, do�while, for, the ternary operator
+
+.
+It uses the same primitive types: int, double, boolean
+
+.
+It uses Strings and arrays
+
+.
+It has the same rules about variable scope
+
+
+
+Do I need to relearn everything?
+
+
+Particularly the way you declare and use methods
+.
+Methods (other than main) will no longer be static
+
+.
+The main method will be a lot smaller
+
+.
+Some methods will use keywords like private rather than public
+
+.
+Method calls will be preceded by an object name
+
+
+
+You need to unlearn some things
+
+
+OOP programs will look more like this:
+
+A Preview of Things to Come
+
+
+
+
+
+
+The key �action� happens in another class now�
+
+A Preview of Things to Come
+
+
+
+
+
+
+
+
+
+
+Object-oriented programming (OOP) involves programming using objects .which represents an entity in the real world that can be distinctly identified
+.
+A unique identity �a name that identifies it
+
+.
+Stateor propertiesof an object �a set of data fields with their current values
+
+.
+Behaviourof an object �a set of methods
+
+
+
+OO Programming Concepts
+
+
+
+.
+We use all kinds of �objects� in our daily lives
+
+.
+These objects all have their properties, and behaviours
+
+.
+What would the property of a CAR be?
+
+.
+What are some behaviours of a CAR?
+
+
+
+Analogy: Objects and Classes
+
+
+.
+We use all kinds of �objects� in our daily lives
+
+.
+These objects all have their properties, and behaviours
+
+
+
+Java Class and Object Concept
+Analogy: Objects and Classes
+
+
+An object can have both a state and behaviour
+.
+The state defines the object
+
+.
+The behaviour defines what the object does 
+
+
+
+Analogy: Objects and Classes
+
+
+
+.
+Classesare constructs that define objects of the same type.
+
+.
+A Java class uses variables to define data fields and methods to define behaviours.
+
+.
+Additionally, a class provides a special type of methods, known as constructors, which are invoked to construct objects from the class
+
+
+
+Classes
+
+
+Typically organised in this order, but there is no fixed rule on how to arrange this
+
+Structure of a Class
+
+
+
+.
+We should use two different Class files �one to represent the object that we are creating, another solely for the program (with main() method)
+
+
+
+Good Practices
+
+
+
+
+Classes � An example
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+It is possible to do this (put the main method into the class you want to work on)but this is not good software design and is often discouraged. Moreover, things become complicated if you need to have multiple classes.
+
+
+
+.
+
+Good Practices (cont�d)
+
+
+UML Class Diagram
+
+
+
+.
+Unified ModelingLanguage (UML) �General-purpose modelling �language� to describe the design and structure of a software system
+
+.
+It is not a programming language but a �visual� language to provide a blueprint for software
+
+.
+Many types of UML diagrams
+
+.
+You will learn and use this more in other courses (Intro to Software Engr.) 
+
+
+
+Side track: UML
+
+
+UML Class Diagram
+
+
+
+UML Class Diagram
+
+
+
+.
+Constructors are a special kind of method that are invoked to construct objects
+
+
+
+Constructors
+
+
+
+
+
+.
+Constructors with no parameters are referred to as a no-argconstructor
+
+.
+Constructors must have the same name as the class itself.
+
+.
+Constructors do not have a return type �not even void.
+
+.
+Constructors are invoked using the new operator when an object is created. Constructors play the role of initialising objects.
+
+
+
+Constructors
+
+
+
+Creating objects with constructors
+
+
+
+
+
+
+
+.
+A class may be defined without constructors.
+
+.
+In this case, a no-argconstructor with an empty body is implicitly defined in the class.
+
+.
+This constructor, called a default constructor, is provided automatically only if no constructors are explicitly defined in the class.
+
+
+
+Default constructors
+
+
+.
+You may define your own parameterised constructors to give your program different ways of creating object instances.
+
+.
+You can create as many constructors as you wish, but they must all have different signatures (Recall: similar tomethod signatures)
+
+.
+When creating object instances, you must ensure that a valid constructor is used
+
+
+
+Creating constructors
+
+
+Example of various constructors that you can create:
+Note: They function similarly as methods, by passing the input arguments to the constructor implementation
+
+Creating constructors
+
+
+
+.
+Object variables or object reference variables, can be declared using the following syntax:
+
+
+
+Example:
+
+Declaring objects from classes
+
+
+
+
+.
+Object instancesor object reference variables, can be declared using the following syntax:
+
+
+
+Create an object
+
+Assign object reference
+
+Declaring/creating objects
+
+
+
+
+.
+Referencing the object�s data:
+
+
+
+Accessing the Object�s members
+
+.
+Invoking the object�s method:
+
+
+
+objectRefVar.data 
+E.g., myCircle.radius
+
+objectRefVar.methodName open paren arguments close paren 
+E.g., myCircle.getArea open paren close paren 
+
+
+Trace Code
+
+
+
+
+
+
+Trace Code
+
+
+
+
+
+
+Trace Code
+
+
+
+
+
+
+Trace Code
+
+
+
+
+
+
+Trace Code
+
+
+
+
+
+
+
+Trace Code
+
+
+
+
+
+
+Trace Code
+
+
+
+
+
+Recall: Methods you have created before this were static methods (with static keyword) 
+Static method: A method defined as a member of an object but is accessible directly from object constructor than object instance 
+Static methods allow another class to invoke it via the constructor
+E.g. Math.sqrt open paren 50 close paren  invokes the method �sqrt� directly from the Math class.
+
+Classes: Non-static methods
+
+
+Non-static methods: Methods must be invoked from an object instance. 
+E.g., With an object instance myCircle created, we now use it to invoke getArea open paren close paren 
+
+myCircle.getArea open paren close paren 
+
+Classes: Non-static methods
+
+
+Data fields are the collection of variables that contain data which describes the properties of the class.
+Each created object has its own set of data fields
+	E.g. Both myCircle and yourCircle contains its own radius value.
+
+Data Fields
+
+
+Java library has a collection of classes that is available for use (you may have used some of these) with most of them in the bold j bold a. bold v bold a. . bold u bold t bold i. bold l  package:
+String
+Scanner
+Random
+Date 
+Integer
+�and more
+
+Java Library Classes
+
+
+
+.
+Java provides a system-independent encapsulation of date and time in the java.util.Date class. You can use the Date class to create an instance for the current date and time and use its toString method to return the date and time as a string.
+
+
+
+The Date Class
+
+
+
+Forexample,thefollowing code
+displaysastringlike (current date)
+Fri Sep 2913:50:19 SGT 2022
+
+The Date Class (Example)
+
+
+
+.
+Here�s a useful random number generator provided in the java.util.Random class. Alternatively, you can also try Math.random() to obtain a random double value between 0.0 and 1.0 (excluding 1.0)
+
+
+
+The Random Class
+
+
+
+.
+If two Random objects have the same seed, they will generate identical sequences of numbers. For example, the following code creates two Random objects with the same seed 3.
+
+
+
+The Random Class (Example)
+
+
+
+
+
+Class Instances, Variables and MethodsSoftware Development A (F28PA)
+
+A selection of these slides are adapted from F27SA Software Development 1 & 2 (Edinburgh/Dubai).
+
+
+.
+Static Variables, Constants and Methods
+
+.
+Access Specifiers
+
+.
+Getter and Setter Methods
+
+.
+The thiskeyword
+
+.
+Revisiting Reference Data Fields
+
+
+
+Outline
+
+
+.
+Static variablesare shared by all the instances of the class
+
+.
+Static methodsare not tied to a specific object
+
+.
+Static constantsare final variables shared by all the instances of the class.
+
+
+
+Static Variables, Constants, Methods
+
+
+.
+Static variablesare shared by all the instances of the class
+
+.
+Static methodsare not tied to a specific object
+
+.
+Static constantsare final variables shared by all the instances of the class.
+
+
+
+
+
+
+
+Static Variables, Constants, Methods
+
+
+.
+To declare static variables, constants, and methods, use the static modifier.
+
+.
+Examples:
+
+
+staticint counter = 0;
+staticfinal double PI = 3.1415;
+public staticvoid getCounter() {
+}
+
+Static Variables, Constants, Methods
+
+
+
+Static Variables, Constants, Methods
+
+
+Access Specifier
+
+ Class
+
+ Package
+
+ Subclass
+
+ World
+
+ 
+public
+
+ 
+private
+
+ 
+protected
+
+ 
+No specifier (default)
+
+ 
+
+Checkmark
+Close
+Checkmark
+Checkmark
+Checkmark
+Checkmark
+Checkmark
+Checkmark
+Checkmark
+Checkmark
+Close
+Close
+Close
+Close
+Close
+Checkmark
+
+.
+Access specifier (or visibility modifier) is to set access levels for classes, variables, methods and constructors
+
+
+
+Access Specifiers
+
+
+Premium Vector | Treehouse illustration
+A picture containing scene, road
+
+Description automatically generated
+John�s Family
+
+A close up of a sign
+
+Description automatically generated
+Sam�s Family
+
+A close up of a logo
+
+Description automatically generated
+Icon
+
+Description automatically generated
+A close up of a logo
+
+Description automatically generated
+A close up of a sign
+
+Description automatically generated
+class
+
+variables
+
+methods
+
+Icon
+
+Description automatically generated
+
+John�s Bus
+
+Sam�s Money
+
+Anything declared public can be accessed from any other class. Therefore, fields, methods, blocks declared inside a public class can be accessed from any class.
+
+public Access Specifier
+
+
+A picture containing scene, road
+
+Description automatically generated
+A close up of a sign
+
+Description automatically generated
+A close up of a logo
+
+Description automatically generated
+A close up of a sign
+
+Description automatically generated
+class
+
+variables
+
+methods
+
+Icon
+
+Description automatically generated
+
+Sam�s Family
+
+A close up of a logo
+
+Description automatically generated
+Icon
+
+Description automatically generated
+Sam�s Money
+
+Sam�s Car
+
+Premium Vector | Treehouse illustration
+A picture containing scene, road
+
+Description automatically generated
+John�s Family
+
+A close up of a logo
+
+Description automatically generated
+John�s Money
+
+Icon
+
+Description automatically generated
+John�s Bus
+
+Icon
+
+Description automatically generated
+private Access Specifier
+
+Anything declared private can only be accessed within the declared class itself. Private access modifier is the most restrictive access level.
+
+
+A picture containing scene, road
+
+Description automatically generated
+A close up of a sign
+
+Description automatically generated
+A close up of a logo
+
+Description automatically generated
+A close up of a sign
+
+Description automatically generated
+class
+
+variables
+
+methods
+
+Icon
+
+Description automatically generated
+
+Sam�s Family
+
+Premium Vector | Treehouse illustration
+A picture containing scene, road
+
+Description automatically generated
+John�s Family
+
+A close up of a logo
+
+Description automatically generated
+John�s Money
+
+Icon
+
+Description automatically generated
+John�s Bus
+
+A picture containing background pattern
+
+Description automatically generated
+Sam�s Cousin�s Family
+
+A close up of a logo
+
+Description automatically generated
+
+Sam�s Money
+
+Icon
+
+Description automatically generated
+Sam�s Car
+
+
+Icon
+
+Description automatically generated
+Anything declared protected in a superclass can be accessed only by the subclasses in other package or any class within the package of the protected members' class.
+
+protected Access Specifier
+
+
+A picture containing scene, road
+
+Description automatically generated
+A close up of a sign
+
+Description automatically generated
+A close up of a logo
+
+Description automatically generated
+A close up of a sign
+
+Description automatically generated
+class
+
+variables
+
+methods
+
+Icon
+
+Description automatically generated
+
+Sam�s Family
+
+Icon
+
+Description automatically generated
+Sam�s Car
+
+Premium Vector | Treehouse illustration
+A picture containing scene, road
+
+Description automatically generated
+John�s Family
+
+Icon
+
+Description automatically generated
+John�s Bus
+
+A picture containing background pattern
+
+Description automatically generated
+A close up of a logo
+
+Description automatically generated
+
+Sam�s Money
+
+
+
+
+Sam�s Cousin�s Family
+
+Icon
+
+Description automatically generated
+It is possible to have different access for different variables and methods!
+
+protected Access Specifier
+
+
+.
+By default, the class, variable, or method can be accessed by any class in the same package..
+public
+
+
+
+
+
+The class, data, or method is visible to any class in any package.
+.
+private
+
+
+
+The data or methods can be accessed only by the declaring class.
+
+Access Specifiers
+
+
+.
+The private modifier restricts access to within a class, the default modifier restricts access to within a package, and the public modifier enables unrestricted access.
+
+
+
+
+Access Specifiers
+
+
+.
+The default modifier on a class restricts access to within a package, and the public modifier enables unrestricted access.
+
+
+
+
+Access Specifiers
+
+
+.
+An object cannot access its private members, as shown in (b). It is OK, however, if the object is declared in its own class, as shown in (a).
+
+
+
+
+Access Specifiers - Note
+
+
+.
+To protect data
+
+.
+To make code easy to maintain
+
+
+
+Why Data Fields should be Private?
+
+
+Circle
+
+ 
+-radius: double
+-numberOfObjects: int
+
+ 
++Circle()
++Circle(radius: double)
++getRadius(): double
++setRadius(radius:double): void
++getNumberOfObjects(): int
++getArea(): double
+
+ 
+
+The radius of this circle (default: 1.0). The number of circle objects created.
+
+Constructs a default circle object.
+Constructs a circle object with speci.ed radius. Returns the radius of this circle.
+Sets a new radius for this circle.
+Returns the number of circle objects created. Returns the area of this circle.
+
+The - sign indicates
+
+private modifier
+
+
+
+Data Field Encapsulation
+
+
+.
+�Getter� (get) and �setter� (set) methods � which are public
+
+.
+Typically, we name these methods with a �get� or �set� in front of the name of data field that we are accessing.
+
+.
+Getter methods are also known as accessor methods
+
+.
+Setter methods are also known as mutator methods
+
+
+
+How can we access Private members?
+
+
+.
+Example:
+
+
+
+
+
+.
+The getter method: Used to retrieve the value of the instance variable 
+
+.
+The setter method: Used to modify the value of the instance variable
+
+
+
+Getter and Setter Methods
+
+
+.
+The this keyword is the name of a reference that refers to an object itself. .
+One common use of the this keyword is because a field is shadowed by a method or constructor argument
+
+.
+Another common use of the this keyword to enable a constructor to invoke another constructor of the same class.
+
+
+
+
+
+
+The this keyword
+
+
+.
+Each argument to the constructor shadows one of the object�s fields (same name).
+
+.
+The this keyword refers to the object�s fields
+
+
+
+
+
+.
+
+.
+
+The this keyword
+
+
+
+public class Circle { 
+private double radius;
+public Circle(double radius) {
+this.radius = radius;
+
+.
+Calling an overloaded constructor using the this keyword 
+
+
+
+}
+
+public Circle() {
+this(1.0);
+}
+
+public double getArea() {
+return this.radius * this.radius * Math.PI;
+}
+Every instance variable belongs to an instance represented by this, which is normally omitted
+
+}
+
+
+
+
+
+this must be explicitly used to reference the data .eld radius of the object being constructed
+
+
+
+this is used to invoke another constructor
+
+
+
+The this keyword
+
+
+.
+Recall: Arrays are �object� data types and not primitive data types. Object data types store a reference to the address in memory which holds the actual data .sometimes known as reference types.
+
+.
+Data fields can be of reference types:
+
+
+
+public class Student {
+String name; // name has default value null
+int age; // age has default value 0
+boolean isScienceMajor; // isScienceMajor has default value false char gender; // c has default value '\u0000'
+}
+
+Reference Data Fields
+
+
+
+public class Student {
+String name; // name has default value null
+int age; // age has default value 0
+boolean isScienceMajor; // isScienceMajor has default value false char gender; // c has default value '\u0000'
+}
+
+.
+The default value of a reference data field (like String) is the special value of null which literally means empty.
+
+.
+Note that when class data fields are declared, there is no need to initialise!
+
+
+
+Default values of Data Fields in Classes
+
+
+.
+Recall: Java does not assign a default value to local variables inside a method (including main).
+
+
+
+public class Test {
+public static void main(String[] args) { int x; // x has no default value String y; // y has no default value System.out.println("x is " + x); System.out.println("y is " + y);
+}
+}
+
+
+Compile error: variable notinitialized
+
+Recall: Default values of Local Variables
+
+
+
+
+
+
+radius = 1
+
+
+
+
+
+
+i
+
+Primitive type assignment i = j
+
+Before:
+
+
+j
+
+
+i
+
+After:
+
+
+j
+
+
+
+
+
+Copying Variables of Primitive Data Types vs Object Types
+
+
+.
+The object previously referenced by c1 is no longer referenced. That part of the memory (the object) is known as �garbage� and is disposed of i.e., automatically collected by JVM. This process is known as garbage collection
+
+
+
+Garbage Collector Carrying Bin Cartoon card #Ad , #AFFILIATE, #Carrying, # Collector, #Garbage, #card | Cartoon, The collector, Everyday heroes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c1
+
+c2
+
+
+
+Garbage Collection
+
+
+.
+TIP: If you know that an object is on longer needed, you can explicitly assign null to a reference variable for the object. The JVM will automatically collect the space if the object is not referenced by any variable.
+
+
+
+Garbage Collection
+
+
+.
+The scope of instance and static variables is the entire class. They can be declared anywhere inside a class.
+
+.
+The scope of a local variable starts from its declaration and continues to the end of the block that contains the variable. A local variable must be initialized explicitly before it can be used.
+
+
+
+Scope of Variables
+
+
+
