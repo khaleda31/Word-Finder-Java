@@ -1,0 +1,517 @@
+
+
+
+
+. Output: Files, network, gamepad rumble, monitor, LEDs, speakers, robot motor etc. 
+
+
+Input/Output Streams 
+. 
+A stream is a sequence of bytes that flow from a source to a destination 
+
+. 
+In a program, we read information from an input stream and write information to an output stream. 
+
+. 
+A program can manage multiple streams simultaneously 
+
+. 
+The java.io package contains many classes that allow us to define various streams with particular characteristics. 
+
+. 
+Some classes assume that data consists of characters � others assume that data consists of raw bytes of binary information 
+
+. 
+Streams can be sub-divided into: 
+
+� 
+Data stream, which acts as source or destination 
+
+� 
+Processing stream, which alters or manipulates the basic data in the stream 
+
+
+
+. 
+A character stream manages 16-bit Unicode characters 
+
+� Used to read/write data in text format (characters) � 
+E.g. plain text files, web pages, user input 
+� Reader and Writer classes 
+
+. 
+A byte stream manages 8-bit bytes of raw binary data (1�s and 0�s) 
+
+� 
+E.g. images, audio, etc. A program must determine how to interpret and use the bytes 
+
+� 
+InputStream and OutputStream classes 
+
+
+
+
+
+
+
+
+Standard I/O 
+. There are three standard I/O streams: 
+� 
+Standard input �defined by System.in 
+
+� Keyboard input 
+
+� 
+Standard output �defined by System.out 
+
+� Screen output (typically in some window) 
+
+� 
+Standard error �defined by System.err 
+
+
+� Screen output (typically in some window) 
+
+
+Where is information stored? 
+. 
+Information in dynamic memory is lost when the computer is turned off 
+
+� E.g. dynamic RAM in main computer memory 
+
+. 
+Information in static memory persists more or less indefinitely 
+
+
+� E.g. disk, static RAM in USB drives/SD cards or media player storage or mobile phones 
+
+
+
+Files 
+. 
+All memory is actually un-typed bytes with binary encodings 
+
+e.g. 0110101010101101010110101111000111� 
+
+. 
+Most programming languages enable us to treat memory as if full of typed values 
+
+� 
+This includes Java 
+
+� 
+For example, a file is typically read as a sequence of characters 
+
+
+
+
+
+
+Files 
+. 
+Files can be read using sequential access or random access 
+
+. 
+Sequential access: 
+
+� 
+The more common of the two, and easier 
+
+� 
+Only work through file from start to finish 
+
+� 
+Cannot go backwards 
+
+
+
+. 
+Random access (Java supports as well) 
+
+� 
+File is treated as an array of bytes 
+
+� 
+Not covered in this course! 
+
+
+
+
+
+Files 
+. java.io 
+� Package of classes for input and output (I/O) 
+. File object 
+� 
+Not an actual file 
+
+� 
+Has methods to manipulate actual files 
+
+
+. new File (String path) 
+� Returns File object associated with file at �path�� the file�s name and location 
+
+Paths 
+. A path can be 
+. 
+A file name, if it�s in the correct directory as your program file. 
+
+. 
+An absolute path, including parent directories 
+
+� E.g. C:/Documents/Stuff/file.txt 
+
+. 
+A relative path 
+
+
+� E.g. if in Documents: Stuff/file.txt 
+Note: For Windows, don�t use backslashes: \ 
+� 
+These have a special meaning in Java 
+
+� 
+Replace with either /or\\ 
+
+
+
+Reading Files 
+. Scanner(File file) 
+� 
+Associates a Scanner with a File object 
+
+� 
+Can then use methods to read typed data 
+
+� 
+E.g. nextInt(), nextDouble() etc. � or next() to read the next token (i.e. word) 
+
+
+Note: The file must exist already. If not, the system raises an exception 
+
+Reading Files 
+Another common way of reading files is using BufferedReader, where data is read in as String or text data (as opposed to Scanner which reads and parses text data into Java primitive types e.g. int, double) 
+. 
+BufferedReader exists since older versions of Java while Scanner is a newer edition to Java 
+
+. 
+BufferedReader has significantly larger buffer (8KB) than Scanner (1KB) 
+
+
+
+. The File class is used to create a File instance to reference a text file in Java 
+File text = new File("C:/temp/test.txt"); 
+. Use Scanner object to read the File object 
+Scanner scnr = new Scanner(text); 
+. To use Scanner this way, the main method needs to throw a checked exception 
+public static void main(String[] args) throws FileNotFoundException 
+
+. Use Scanner method hasNext() or hasNextLine() for condition checking to continuously read from file 
+while (scnr.hasNext() ) 
+{ 
+String name = scnr.nextLine(); 
+int age = scnr.nextInt(); 
+double weight = scnr.nextDouble(); 
+... 
+} 
+
+
+Reading Files (Summary) 
+. 
+Typical procedure for reading a file: 
+
+� 
+Create a File object 
+
+� 
+Pass file to a Scanner object 
+
+� 
+Loop: read each line / word / number in the file 
+
+� 
+Stop at end of the file 
+
+� 
+Use Scanner�s hasNext() or hasNextLine() method 
+
+� 
+Returns true if not at end of file 
+
+
+
+
+
+. 
+You can also use BufferedReader together with FileReader 
+
+. 
+It reads much more efficiently with the help of a buffer which stores all the data in a temporary location before sending to CPU for processing 
+
+. 
+However, it has limited parsing capability. You can read a whole line of data (entirely as a String) but need to further split/break it down to their respective primitive data types if necessary. 
+
+
+
+
+
+
+
+Writing to a File 
+. Filewriter (File file) 
+� 
+Used to write text to a file 
+
+� 
+write(String string) method 
+
+� 
+Text is written immediately to the file as data in the stream is encountered � this is not very efficient 
+
+
+
+� BufferedWriter (Writer writer) 
+. 
+Text is buffered in memory and only written to the file intermittently � This is more efficient 
+
+. 
+Also provides a newLine() method 
+
+
+Note that parameter is a Writer, not a File 
+. 
+Typically passed in a FileWriter object 
+
+. 
+E.g. 
+
+
+new BufferedWriter(new FileWriter(String path)) 
+
+
+. Java also has a FileWriter class and PrintWriter class that can be used for file writing 
+� 
+FileWriter has minimal support for manipulating data � very simple 
+
+� 
+PrintWriter provides its own print and println methods so that you can �print� to the text file with the same familiar commands. 
+
+
+
+Throw�Exception? 
+. 
+You might have noticed the keyword throw (followed by some kind of �Exception�) occasionally appears in the code that reads and writes files 
+
+. 
+This is because reading and writing files can very often result in all sorts of errors (missing file, file cannot read, etc.) and these �exceptions� need to be properly �handled� 
+
+. 
+More on exception handling in the next topic 
+
+
+
+Object Serialisation 
+. 
+Object serialisation is a mechanism of saving an object, and its current state, so that it can be used in another program �all other objects that are referenced by the object are saved too 
+
+. 
+Persistence � the object �lives� beyond this program execution 
+
+. 
+There is a Serialization interface which allows that to happen (something not covered for now) 
+
+
+
+
+
+Exceptions 
+. 
+Codes typically run continuously from statement to statement until something untoward happens� 
+
+. 
+The program must 
+
+� 
+Stop what it�s doing (because it�s not feasible to continue) 
+
+� 
+Deal with the problem (like avoid or correct it) 
+
+
+
+
+� or Pass theproblem to somewhereelsetobedealt with 
+
+. 
+An exception is an object that describes an unusual or erroneous situation 
+
+. 
+Exceptions are thrown by a program, and may be caught and handled by another part of the program 
+
+. 
+A program can be separated into a normal execution flow and an exception execution flow 
+
+. 
+An error is also represented as an object in Java, but usually represents a unrecoverable situation and should not be caught 
+
+. 
+So in Java, when something untoward occurs, an exception is raised. 
+
+. 
+Many Java packages 
+
+� 
+Are designed to anticipate known exceptions 
+
+� 
+Help programs to deal with exceptions 
+
+
+
+. 
+E.g. the Scanner (File file) can cause a 
+
+
+
+
+exception if the file to be read is not found. 
+
+. 
+The program can: 
+
+� 
+�catch� the exception i.e. deal with it 
+
+� 
+�throw� the exception i.e. pass it on to somewhere else to deal with it 
+
+
+
+. 
+The manner in which an exception is processed is an important design consideration 
+
+. 
+Ultimately, the program can throw exception all the way back to the system. 
+
+� Java runtime environment (JRE) catches it, prints out the exception/error and terminates the program. 
+
+. 
+Occasionally, an exception is ignored by the program, that results in the program terminating abnormally and producing an appropriate message. 
+
+. 
+The message includes a call stack trace that indicates the line on which the exception occurred 
+
+. 
+The call stack trace also shows the method call trail that leads to the attempted execution of the offending line 
+
+
+
+
+
+
+
+
+try statement 
+. 
+To process an exception when it occurs, the line that throws the exception is executed within a try block 
+
+. 
+A try block is followed by one or more catch clauses, which contain code to process an exception 
+
+. 
+Each catch clause has an associated exception type and is called an exception handler 
+
+. 
+When an exception occurs, processing continues at the first catch clause that matches the exception type 
+
+. 
+Sometimes, you don�t want to handle exceptions� in which case, you can use throws which can be added to the method signature 
+
+
+
+
+
+
+
+
+. method fetches the message that was triggered by the exception e 
+
+
+. method will print out a trace of all the methods that were called leading up to the method that threw the exception 
+
+
+
+
+. 
+A try statement can have an optional clause following the catch clauses, designated with the reserved word finally 
+
+. 
+The statements in finally clause are always executed 
+
+. 
+Regardless of whether an exception is generated, the statements in the finally clause will be executed 
+
+
+
+
+Exception Propagation 
+. 
+An exception can be handled at a higher level if it�s not appropriate to handle where it occurs 
+
+. 
+Exceptions propagate up through the method calling hierarchy until they are caught or handled or until they reach the main method. 
+
+. 
+A try block that contains a call to a method in which an exception is thrown can be used to catch that exception 
+
+. 
+You can also create your own exception to be more specific 
+
+. 
+catch(Exception e) catches everything, inherit from java.lang.Exception 
+
+. 
+You might not want to handle everything 
+
+
+
+. 
+To design an exception to validate that an integer is less than or equal to a certain max 
+
+. 
+The following code shows how this new Exception is thrown 
+
+
+
+
+
+
+
+
+
+Checked Exceptions 
+. 
+An exception is either checked or unchecked 
+
+. 
+A checked exception either must be caught by a method, or must be listed in the throws clause of any method that may throw or propagate it 
+
+. 
+A throws clause is appended to the method header 
+
+. 
+The compiler will issue an error if a checked exception is not handled appropriately. 
+
+
+
+Unchecked Exceptions 
+. 
+An unchecked exception does not require explicit handling, though it could be processed that way. 
+
+. 
+The only unchecked exceptions in Java are objects of type RuntimeException or any of its descendants. 
+
+
+
