@@ -1,0 +1,1171 @@
+Introduction to SDASoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai) taught by Michael Lones
+
+
+It is a course about software development
+.
+It's mostly about learning to program
+
+.
+It's suitable for beginners
+
+.
+It's based around Java, but the aim is to gain a broader understanding of procedural and object-oriented programming
+
+
+
+What is SDA?
+
+
+The course (F28PA) will run from Weeks 1 to 6
+.
+You will be learning the fundamentals of programmingand object-oriented programming
+
+
+
+Two Courses in a Semester
+
+
+Each week consists of:
+.
+Programming exercises, designed to build your programming skills
+
+.
+A timetabled Q & A session (Friday), where you can ask questions about the previous week's concepts.
+
+.
+A timetabled lecture sessions (Monday and Wednesday), where you get a topic review from your lecturer and some hands-on practice
+
+.
+A timetabled lab session (Thursday), where you can get help with programming problems
+
+
+
+Course Elements
+
+
+These are formative exercises designed to help you develop your programming skills
+.
+Solutions will be made availablein the following weeks.
+
+.
+Theyare designed to build your programming skills before you do assessed coursework.
+
+
+
+Tutorial Exercises
+
+
+These are assessed programming exercises that contribute towards your mark for the course
+.
+Each has a deadline, and your solutions must be submitted before this deadline.
+
+.
+University late policy applies.
+
+.
+This is your own work, but you can ask for help during lab sessions if you get stuck.
+
+
+
+Assessed Coursework
+
+
+This course is assessed 50% through coursework and 50% through examination
+.
+The exam will be conducted in-person invigilated closed-book exams
+
+.
+You will have to answer a series of multiple-choice questions and short structured questions.
+
+
+
+Assessment
+
+
+This is the glue that holds together the week. Activities in lecture sessions include:
+.
+A brief review of what you've learnt from lectures
+
+.
+Answers to questions raised by students
+
+.
+Live programming examples, including hands-on session and going through solutions to tutorial questions
+
+.
+Interactive elements and quizzes
+
+
+
+Face-to-Face Sessions
+
+
+Canvas tells you what you should be doing each week during the course.
+.
+A module for each week
+
+.
+Each module takes you through material, tutorial exercises and any assessed coursework
+
+.
+Also gives pointers to further reading.
+
+
+
+Canvas
+
+
+SDA is a very important course:
+.
+Programming is a computer scientist's key skill
+
+.
+It is required in almost every computer science course
+
+.
+You need it for most computer science careers
+
+.
+Basically, you can't be a computer scientist without it!
+
+
+In short, if you don't learn the basics of programming, you will struggle with the rest of your degree
+
+
+
+The Importance of SDA
+
+
+.
+Go through all lecture material
+
+.
+Attend all timetabled sessions
+
+.
+Practice programming often
+
+.
+Study outside of contact hours
+
+.
+Seek help if you are struggling
+
+
+
+How to help yourself learn
+
+
+The lectures for SDA are self-contained and not related to a particular book
+.
+However, you may find textbooks useful for reinforcing the material that we teach you
+
+.
+There are many Java programming books. Which one is best for you depends on your learning style
+
+
+
+Learning Resources
+
+
+Java in Two Semesters
+.
+Suitable for beginners
+
+.
+Has a similar structure to this course
+
+
+
+
+Book Suggestions
+
+
+Foundational Java
+.
+A good coverage of fundamental to more advanced concepts
+
+.
+References Eclipse IDE mostly
+
+
+
+Book Suggestions
+
+
+
+Beginning Programming with Java
+.
+Suitable for beginners
+
+.
+Easy to read, like all Dummies guides
+
+
+
+Book Suggestions
+
+
+
+Objects First with Java
+.
+Good content covering object-oriented programming topics
+
+.
+Strong emphasis on using BlueJ (another IDE like Eclipse)
+
+
+
+Book Suggestions
+
+
+
+There are also many free programming books:
+.Free Programming Books
+
+
+
+Free Books
+
+
+.
+Oracle have comprehensive Java Tutorials
+
+.Wikibooks Java Programming
+
+
+
+Websites
+
+
+.edX
+
+.MIT Open Course Ware
+
+.Coursera
+
+.Code Academy
+
+
+
+Free Online Programming Courses at
+
+
+All students have free access to courses at: LinkedIn Learning
+.
+Login with your university email and credentials 
+
+.
+There are various Java courses available
+
+.
+These mostly go beyond the material covered here, but you may find them useful
+
+
+
+LinkedIn Learning
+
+
+StackOverflow has answers to many questions:
+.
+https://stackoverflow.com
+
+.
+https://stackoverflow.com/questions/tagged/java
+
+.
+You can add your own questions and answers
+
+
+
+Online Help
+
+
+It�s worth being aware that Java has changed a lot since it was first released in 1995
+.
+There�s lots of old code on the internet and in old books, some of which is quite dated.
+
+.
+Anything before Java 5 (also known as Java 1.5), released in 2004, is considered prehistoric.
+
+
+
+Historical Note
+
+
+ProgrammingLanguagesSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai) taught by Michael Lones
+
+
+Programming Language
+
+A programming language is a language thatallows you tocommunicate with acomputer
+.
+And tell it what you want it to do
+
+.
+In general, programming languages are quite different to human languages
+
+.
+They have very strict syntax, meaning that computer programs have to be written in a very precise way
+
+
+
+
+Programming Language
+
+There are thousands of programming languages
+.
+Computer scientists love inventing new ones
+
+.
+Usually, <10 in widespread use at any particular time
+
+
+
+
+
+
+Programming Language
+
+There are various ways of classifying them
+Generations:
+.
+1st: Machine languages, sequence of binary digits
+
+.
+2nd: Assembly languages, easier for humans to read and write, but very low-level
+
+.
+3rd/4th: High-level languages, designed with programmers in mind, includes Java, Python etc.
+
+.
+5th: Aim to make programming more accessible, tend to be inefficient, still a work in progress
+
+
+
+
+CS Y2
+
+CS Y2
+
+
+Programming Language
+
+There are various ways of classifying them
+Applications:
+.
+Industrial-strength: These are widely used in industry, well-defined standards, produce programs that are relatively fast to execute, and scale well. Well known examples are C++ and Java.
+
+.
+Scripting languages: These are widely used in the management of computer systems, and for writing smaller programs. Reduce development time but are less efficient and scalable. Includes Python and PHP. These are used in various courses from Year 2 onwards
+
+
+
+
+
+
+Programming Language
+
+There are various ways of classifying them
+Paradigms:
+.
+Procedural: This is the first style of programming that most people come across. Includes C and BASIC.
+
+.
+Object-oriented: This make it easier to write larger programs that are more readable. Includes C++ and Java.
+
+.
+Multi-paradigm: Languages such as Python and Ruby allow you to write programs in a mixture of styles, including procedural, object-oriented, and others.
+
+
+
+
+
+
+
+This timeline only shows the more popular and historically-significantlanguages. The text size gives a rough indication of current popularity.
+
+Programming Language
+
+
+Language
+
+ 2020
+
+ 2015
+
+ 2010
+
+ 2005
+
+ 2000
+
+ 1995
+
+ 1990
+
+ 1985
+
+ 
+Java
+
+ 1
+
+ 2
+
+ 1
+
+ 2
+
+ 3
+
+ -
+
+ -
+
+ -
+
+ 
+C
+
+ 2
+
+ 1
+
+ 2
+
+ 1
+
+ 1
+
+ 2
+
+ 1
+
+ 1
+
+ 
+Python
+
+ 3
+
+ 7
+
+ 6
+
+ 6
+
+ 21
+
+ 20
+
+ -
+
+ -
+
+ 
+C++
+
+ 4
+
+ 3
+
+ 4
+
+ 3
+
+ 2
+
+ 1
+
+ 2
+
+ 10
+
+ 
+C
+
+ 5
+
+ 5
+
+ 5
+
+ 9
+
+ 9
+
+ -
+
+ -
+
+ -
+
+ 
+JavaScript
+
+ 6
+
+ 8
+
+ 8
+
+ 10
+
+ 6
+
+ -
+
+ -
+
+ -
+
+ 
+PHP
+
+ 7
+
+ 6
+
+ 3
+
+ 5
+
+ 22
+
+ -
+
+ -
+
+ -
+
+ 
+Swift
+
+ 9
+
+ 17
+
+ -
+
+ -
+
+ -
+
+ -
+
+ -
+
+ -
+
+ 
+Ruby
+
+ 10
+
+ 11
+
+ 10
+
+ 24
+
+ 30
+
+ -
+
+ -
+
+ -
+
+ 
+Fortran
+
+ 31
+
+ 28
+
+ 23
+
+ 15
+
+ 16
+
+ 4
+
+ 3
+
+ 5
+
+ 
+Ada
+
+ 33
+
+ 29
+
+ 24
+
+ 17
+
+ 14
+
+ 5
+
+ 6
+
+ 3
+
+ 
+Pascal
+
+ 243
+
+ 16
+
+ 14
+
+ 35
+
+ 12
+
+ 3
+
+ 10
+
+ 6
+
+ 
+
+These figures are from the TIOBE Programming Community index (https://www.tiobe.com/tiobe-index/)
+
+Language Usage
+
+
+Programming Language
+
+A big part of learning to program is learning to use a particular programming language
+.
+Like human languages, these differ in their syntax and semantics
+
+.
+i.e., the �words� they use, the structure of �sentences�, and the way in which sentences are assembled together.
+
+
+
+
+Bonjour?
+Hallo?
+Hei?
+
+
+A program to print "hello world" to the screen. In Python:
+You can see why scripting languages like python are popular with programmers. They let you write programs very quickly.
+
+Hello Worlds
+
+
+
+A program to print "hello world" to the screen. In C:
+Industrial-strength languages, such as C, involve writing a lotmore boiler-plate code. This involves more typing but helps to keep code structured and readable in larger programs.
+
+Hello Worlds
+
+
+
+A program to print "hello world" to the screen. In Java:
+In Java, for example, you always have to make a class definitionand declare the main method, which is where execution begins.
+
+Hello Worlds
+
+
+
+A program to print �hello world� to the screen. In Assembly Language:
+
+Things could be much worse than Java!
+
+Hello Worlds
+
+
+
+
+
+Programs are written in many languages, yet a computer can only execute machine language
+.
+This means that a program must be translated into machine language prior to execution:
+
+
+
+int i=0; String output;
+while(i < to) {
+output += i; i++;
+}
+print(output);
+
+01101010001010
+
+ 
+10101010101110
+
+ 
+10110010101011
+
+ 
+11110010101110
+
+ 
+11000111110010
+
+ 
+01011110001010
+
+ 
+11110010101010
+
+ 
+
+
+
+
+
+
+Programming Language
+
+
+This process of turning a high-level program intoa machine language program uses either:
+.
+An interpreter. When the program is executed, it is translated into machine code on the fly. Languagessuch as Python and Javascript are usually treated in this wayand are known as interpreted languages.
+
+.
+This approach is flexible, but relatively slow, since the code must be translated each time, it is run.
+
+
+
+Compilers and Interpreters
+
+
+This process of turning a high-level program into a machine language program uses either:
+.
+A compiler. Before the program is run, it is fully translated into machine code. The translated program is then stored as an executable file,
+
+.
+e.g., an exe file under Windows.
+
+.
+This approach is less flexible, and often more complicated, but results in much faster programs.
+
+
+
+Compilers and Interpreters
+
+
+It is also possible to combine these approaches into something called a just-in-time compiler
+.
+Code runs within an interpreter, but the interpreter dynamically compiles sections of code that are repeatedly executed.
+
+.
+This combines the flexibility of an interpreter with the speed advantage of a compiler.
+
+
+
+Compilers and Interpreters
+
+
+
+
+Compilers and Interpreters
+
+
+In this course, we use Java
+
+.
+It is a widely used programming language
+
+.
+It is a high-level language that supports both procedural and object-oriented programming
+
+.
+It is well documented, and there are lots of resources available on the internet for novice programmers
+
+.
+It is platform agnostic, meaning that the same programs will run on Windows, Linux and Mac OS
+
+
+
+
+Programming Language
+
+
+However, this is not a course about Java
+.
+It is about programming, and the lessons learnt are applicable to most modern programming languages.
+
+.
+As computer scientists (mostly!), it is important to understand the principles of programming, and be able to apply these using different languages.
+
+.
+Individual languages come and go, but you will (hopefully) still be here developing software.
+
+
+
+
+
+Programming Language
+
+
+Learning to program is also about learning how to use various programming concepts, irrespective of language. SDA covers various concepts:
+.
+Types,variables,operators& expressions
+
+.
+Conditionalexecution
+
+.
+Iteration
+
+.
+Arrays
+
+.
+Sub-programs
+
+
+
+Programming Concepts
+
+
+SDA covers various object-orientedprogramming(OOP)concepts:
+.
+Classes, Objects
+
+.
+Inheritance, Polymorphism, Encapsulation
+
+.
+Class Abstraction
+
+
+� and other useful components of software development
+.
+File I/O Processing
+
+.
+Exception Handling
+
+
+
+Programming Concepts
+
+
+However, learning to program is also about learning to think in a particular way
+.
+How do I take a problem and its solution and convert it into a form that a computer can execute?
+
+.
+This is sometimes known as computational thinking
+
+.
+Some people struggle to develop this way of thinking
+
+.
+Practicing programming and working through programming exercises canreally help
+
+
+
+Computational Thinking
+
+
+Introduction to Java Eclipse and GitlabSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai) taught by Michael Lones
+
+
+You will be working with the following software:
+.
+Java Development Kit (JDK), a set of programs that allow you to compile and run Java programs
+
+.
+Eclipse, an integrated development environment, that you use to develop software
+
+.
+Gitlab, a version control system that allows you to access and share code
+
+
+
+SDA & SDB Software
+
+
+This contains all the programs you need to write and run Java programs. Most important are:
+.
+java, a program that runs Java programs.
+
+.
+javac, the Java compiler, which translates a Java code file into something called a class file.
+
+
+
+
+
+Java Development Kit (JDK)
+
+
+Java is weird in that Java code is first compiled into Java byte code, and then into machine code
+.
+This is why, when you run javac on your .java code files, it generates .class files.
+
+.
+The java program then executes these .class files using a Java Virtual Machine, which translates them into machine code using just-in-time compilation.
+
+
+
+Java Virtual Machine (JVM)
+
+
+Most people use an Integrated Development Environment (or IDE) to develop code
+Meaning that you don't have to run j a. v a.  and j a. v a. c  yourself, because the IDE does this for you
+You'll get to try out Eclipse, which is probably the most popular IDE, in the first lab
+
+Java Programming in Practice
+
+
+The best-known Java IDEs are:
+
+IDEs
+
+
+
+
+Looks something like this when you first run it:
+
+
+Eclipse
+
+
+These are some of the important bits:
+
+
+
+
+Eclipse
+
+
+These are some of the important bits:
+
+
+
+
+
+The play button runs your code
+
+
+Eclipse
+
+
+These are some of the important bits:
+
+
+
+
+
+The play button runs your code
+
+
+
+Eclipse
+
+
+
+To create a program:
+
+
+
+My First Java Program
+
+You first need to create a project to store your program
+
+
+
+To create a program:
+
+
+
+My First Java Program
+
+Then create a Class (for now, you can think of this as the Java term for a program)
+
+
+To create a program:
+
+
+Give it a name
+
+Clickhere
+
+
+My First Java Program
+
+
+To create a program:
+
+
+My First Java Program
+
+
+This program does nothing when run:
+
+However, it will compile. It is in fact the least amount of code required for a program to compile.
+
+My First Java Program
+
+
+
+
+This is the program�s (unimaginative) name
+
+My First Java Program
+
+
+
+My First Java Program
+
+
+
+This is called the main method. It is where execution of a program always begins.
+
+
+My First Java Program
+
+
+
+
+
+
+A pair of curly braces indicate a block of code. There are two pairs in this example: the class block and the main block.
+
+
+My First Java Program
+
+
+
+Tabbed indents show hierarchy. Here, the indentation of the main block shows it is inside W1A_L3_1.
+
+
+
+
+These indicate the visibility of this part of the program to other parts of the program. You�ll learn about this later.
+
+My First Java Program
+
+
+
+
+
+Classes are the basis of object-oriented programming, something we will cover soon. For now, know that every program needs at least one class.
+
+My First Java Program
+
+
+
+Programming languages are intolerant to errors, even small ones, and will tell you about them
+Compile-time errors are generated by j a. v a. c  when your program is not syntactically correct
+Runtime errors (known as exceptions) are generated by j a. v a.  when your program has semantic errors
+Read the error message; they are often informative, though unfortunately not always!
+
+Errors
+
+
+I'm going to show output like this from now on:
+
+Java Hello World
+
+
+
+
+
+I'm going to show output like this from now on:
+
+Java Hello World
+
+
+
+
+
+
+
+
+
+
+
+
+Syntax error, insert ";" to complete BlockStatements
+
+
+A program consists of a series of statements:
+
+Statements
+
+
+
+
+
+You can add plain text comments to code in order to help people understand it:
+
+Comments
+
+
+
+
+
+
+
+
+
+Comments can span multiple lines:
+
+Comments
+
+
+
+
+
+
+
+
+
+It is important to make your code readable. This makes it easier to maintain and to spot errors.
+.
+Always indent your code correctly. This makes it obvious how the code is structured
+
+.
+Add comments whenever it isn't immediately obvious what a section of code does
+
+.
+Give things meaningful names (i.e., not MyProgram)
+
+
+You'll also get much more useful feedback (and more marks!) if we find your code easy to read
+
+
+
+Readability
+
+
+Gitlab is a version control system that is used to share code in this course
+.
+We'll use Gitlab to share code with you, e.g., lecture examples, code for exercises and assessments
+
+.
+A lot of the time you'll be working with Java projects and class files that have already been created
+
+.
+You'll use Gitlab to share code with us, e.g., to get feedback in labs, to submit solutions to assessments
+
+
+
+Gitlab
+
+
+
