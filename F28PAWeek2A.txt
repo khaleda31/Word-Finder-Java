@@ -1,0 +1,664 @@
+Conditional ExecutionSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai)
+
+
+This is where execution can take different paths through a program, depending upon whether a particular condition is true or not
+.
+Different sections of code get executed depending upon the states of variables in the program
+
+.
+Conditional execution is used extensively during programming as a way of making decisions
+
+
+
+What is Conditional Execution?
+
+
+This is the most common form of conditional execution, and is found in every language
+.
+Usually referred to as an if statement
+
+.
+if some condition is true then do this else do this
+
+.
+In Java:
+
+
+
+if�then...else
+
+
+
+
+
+if�then...else
+
+
+
+
+
+
+if�then...else
+
+
+
+
+
+
+
+If you want to execute more than one statement, you need to use a block, i.e., curly braces:
+
+Blocks
+
+
+
+
+
+
+if�then...
+
+
+
+
+
+if�then...
+
+
+
+
+
+
+
+
+
+Conditions are expressions that typically useBoolean operators. Commonly used ones are:
+
+Conditions
+
+Relational Operators
+
+ Meaning
+
+ 
+>
+
+ Greater than
+
+ 
+<
+
+ Less than
+
+ 
+>=
+
+ Greater than or equal to
+
+ 
+<=
+
+ Less than or equal to
+
+ 
+==
+
+ Equal to
+
+ 
+!=
+
+ Not equal to
+
+ 
+
+
+Check whether a negative value is entered:(we worked on the code below last week.)
+
+Exercise
+
+
+
+Solution
+
+
+
+Solution
+
+
+
+
+
+
+
+Conditions are expressions that typically useBoolean operators. Commonly used ones are:
+
+Conditions
+
+Boolean (Relational) Operators
+
+ Meaning
+
+ 
+>
+
+ Greater than
+
+ 
+<
+
+ Less than
+
+ 
+>=
+
+ Greater than or equal to
+
+ 
+<=
+
+ Less than or equal to
+
+ 
+==
+
+ Equal to
+
+ 
+!=
+
+ Not equal to
+
+ 
+
+
+
+However, note that Strings (and other object types) cannot be compared using operators.
+
+A quick aside: Strings
+
+
+
+
+
+
+
+Instead, you have to use their equals methods
+
+A quick aside: Strings
+
+
+
+
+
+
+
+Instead, you have to use their equals methods
+
+A quick aside: Strings
+
+
+
+
+
+
+More complex conditions can be built using these Boolean logic operators:
+.
+&&"and" which is only true when both of its operands are true.
+
+.
+||"or" which is true when at least one of its operands are true.
+
+.
+!"not" which is true when its operand is false, and vice versa.
+
+
+
+Conditions
+
+x
+
+ notx
+
+ 
+False
+
+ True
+
+ 
+True
+
+ False
+
+ 
+
+x
+
+ y
+
+ x andy
+
+ 
+False
+
+ False
+
+ False
+
+ 
+False
+
+ True
+
+ False
+
+ 
+True
+
+ False
+
+ False
+
+ 
+True
+
+ True
+
+ True
+
+ 
+
+x
+
+ y
+
+ x ory
+
+ 
+False
+
+ False
+
+ False
+
+ 
+False
+
+ True
+
+ True
+
+ 
+True
+
+ False
+
+ True
+
+ 
+True
+
+ True
+
+ True
+
+ 
+
+
+Conditions
+
+
+
+
+
+
+
+Conditions
+
+
+
+
+
+
+
+
+
+
+Conditions
+
+
+
+
+
+When constructing more complex expressions, you have to be aware of precedence rules
+.
+This applies whenever operators are used, both inlogic expressions and mathematical expressions.
+
+.
+Operators with highest precedence always get applied first, regardless of where they occur within an expression.
+
+.
+If you're not aware of the precedence rules, then your program might have unexpected behaviour.
+
+
+
+Precedence (recap)
+
+
+Operators in order of precedence (high to low):
+.
+()
+
+.
+++, --
+
+.
+- [minus], !
+
+.
+*, /, %
+
+.
++, -
+
+.
+>, <, >=, <=
+
+.
+==, !=
+
+.
+&&, ||
+
+.
+=, +=, -=, *=, /-
+
+
+
+Precedence
+
+
+Operators in order of precedence (high to low):
+.
+()
+
+.
+++, --
+
+.
+- [minus], !
+
+.
+*, /, %
+
+.
++, -
+
+.
+>, <, >=, <=
+
+.
+==, !=
+
+.
+&&, ||
+
+.
+=, +=, -=, *=, /-
+
+
+
+Precedence
+
+
+
+
+Operators in order of precedence (high to low):
+.
+()
+
+.
+++, --
+
+.
+- [minus], !
+
+.
+*, /, %
+
+.
++, -
+
+.
+>, <, >=, <=
+
+.
+==, !=
+
+.
+&&, ||
+
+.
+=, +=, -=, *=, /-
+
+
+
+Precedence
+
+
+
+
+Conditions
+
+
+
+
+
+
+It�s common to chain if statements:
+
+if�else chain
+
+
+
+It�s common to chain if statements:
+
+if�else chain
+
+
+
+if�else chain
+
+
+
+
+
+It is possible, and even common, to have an if statement inside another if statement, e.g.
+
+Nested ifs
+
+
+
+Nested ifs
+
+
+
+Nested ifs
+
+
+
+
+
+Nested ifs
+
+
+
+
+
+Switch Case StatementsSoftware Development A (F28PA)
+
+A majority of these slides are adapted from F27SA Software Development 1 (Edinburgh/Dubai)
+
+
+.
+This is another kind of conditional execution construct found in most languages
+
+.
+The code executed depends on the value of a variable
+
+
+
+switch�case
+
+
+
+switch�case
+
+.
+This is another kind of conditional execution construct found in most languages
+
+.
+The code executed depends on the value of a variable
+
+
+
+
+
+
+
+
+switch�case
+
+.
+This is another kind of conditional execution construct found in most languages
+
+.
+The code executed depends on the value of a variable
+
+
+
+
+
+
+
+
+
+
+switch�case
+
+.
+This is another kind of conditional execution construct found in most languages
+
+.
+The code executed depends on the value of a variable
+
+
+
+
+
+
+
+switch�case
+
+It is equivalent to this if statement:
+
+The switch�case version is more readable. However, it can only be used for simple conditions.
+
+
+
+
+Example: is this letter a vowel or a consonant?
+
+switch�case
+
+
+
+Example: is this letter a vowel or a consonant?
+
+switch�case
+
+
+
+
+
+Here's the ifversion, which is less readable:
+
+switch�case
+
+
+
+Here's the ifversion, which is less readable:
+
+switch�case
+
+
+
+
+
+EXAM
+
+Many languages, including Java and the C family, have something called the ternary operator
+.
+This provides another form of conditional execution. It's not used often, but can be very useful
+
+
+
+
+If condition is true, variable is assigned value1
+If condition is false, variable is assigned value2
+
+
+
+
+Ternary Operator
+
+
+Reminder
+
+
+From the previous lecture
+
+
+We could rewrite it using the ternary operator:
+
+The ternary operator is sometimes useful for reducing the length of code, though often at the expense of clarity.
+
+Ternary Operator
+
+
+EXAM
+
+
+
+
+
+We could rewrite it using the ternary operator:
+
+Ternary Operator
+
+
+EXAM
+
+
+
+
+
+
+
+
+
+We could rewrite it using the ternary operator:
+
+Ternary Operator
+
+
+EXAM
+
+
+
+The ternary operator is sometimes useful for reducing the length of code, though often at the expense of clarity.
+
+
+
+
